@@ -4,6 +4,7 @@ class MyCard extends StatefulWidget {
   const MyCard({super.key});
 
   @override
+  // ignore: library_private_types_in_public_api
   _MyCardState createState() => _MyCardState();
 }
 
