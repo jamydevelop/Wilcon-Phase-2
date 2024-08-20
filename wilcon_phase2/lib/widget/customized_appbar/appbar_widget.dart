@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:wilcon_phase2/module/notifications/presentation/notifications_page.dart';
 
 class CustomizedAppBar extends StatelessWidget implements PreferredSizeWidget {
   final double height;
@@ -36,12 +37,12 @@ class CustomizedAppBar extends StatelessWidget implements PreferredSizeWidget {
                   icon: const Icon(Icons.notifications, color: Colors.black),
                   onPressed: () {
                     debugPrint("Notifications Pressed!");
-                    // Navigator.push(
-                    //   context,
-                    //   MaterialPageRoute(
-                    //     builder: (context) => const NotificationsPage(),
-                    //   ),
-                    // );
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => const NotificationsPage(),
+                      ),
+                    );
                   },
                 ),
                 IconButton(

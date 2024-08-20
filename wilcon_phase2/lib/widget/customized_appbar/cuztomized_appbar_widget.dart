@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:wilcon_phase2/module/homepage/widget/customized_appbar/appbar_widget.dart';
-import 'package:wilcon_phase2/module/homepage/widget/customized_appbar/back_screen_widget.dart';
+import 'package:wilcon_phase2/widget/customized_appbar/appbar_widget.dart';
+import 'package:wilcon_phase2/widget/customized_appbar/back_screen_widget.dart';
 
 class CuztomizedAppbarWidget extends StatefulWidget {
   const CuztomizedAppbarWidget({super.key});
