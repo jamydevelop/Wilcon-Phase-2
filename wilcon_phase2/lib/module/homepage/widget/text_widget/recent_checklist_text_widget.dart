@@ -12,9 +12,12 @@ class _RecentChecklistTextWidgetState extends State<RecentChecklistTextWidget> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: const EdgeInsets.symmetric(
-          horizontal: 8.0), // 8px padding on left and right
-      alignment: Alignment.topLeft, // Align to the center left of the screen
+      padding: const EdgeInsets.only(
+        left: 8.0, // 8px padding on the left
+        right: 8.0, // 8px padding on the right
+        top: 12.0, // 12px padding on the top
+      ),
+      alignment: Alignment.topLeft, // Align to the top left of the screen
       child: const Text(
         'Recent Checklist',
         style: TextStyle(

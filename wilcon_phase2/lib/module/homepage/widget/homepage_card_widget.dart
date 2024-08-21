@@ -1,20 +1,66 @@
 import 'package:flutter/material.dart';
 
-class MyCard extends StatefulWidget {
-  const MyCard({super.key});
+class HomepageCardWidget extends StatefulWidget {
+  final String mainTitle;
+  final String subTitle;
+  final List<String> rowTitles;
+  final List<String> rowContents;
+
+  const HomepageCardWidget({
+    super.key,
+    required this.mainTitle,
+    required this.subTitle,
+    required this.rowTitles,
+    required this.rowContents,
+  });
 
   @override
   // ignore: library_private_types_in_public_api
-  _MyCardState createState() => _MyCardState();
+  _HomepageCardWidgetState createState() => _HomepageCardWidgetState();
 }
 
-class _MyCardState extends State<MyCard> {
+class _HomepageCardWidgetState extends State<HomepageCardWidget> {
   bool _isExpanded = true;
 
   void _toggleExpansion() {
     setState(() {
       _isExpanded = !_isExpanded;
     });
+  }
+
+  BoxDecoration _getTextDecoration(int index) {
+    if (index == 2) {
+      if (widget.rowContents[index] == "Acknowledge") {
+        return BoxDecoration(
+          color: const Color(0xFFD4F4EC),
+          borderRadius: BorderRadius.circular(30), // 30px border radius
+        );
+      } else if (widget.rowContents[index] == "For checking of inspector") {
+        return BoxDecoration(
+          color: const Color(0xFFFFEECC),
+          borderRadius: BorderRadius.circular(30), // 30px border radius
+        );
+      } else if (widget.rowContents[index] == "Not Validated") {
+        return BoxDecoration(
+          color: const Color(0xFFFDDDD3),
+          borderRadius: BorderRadius.circular(30), // 30px border radius
+        );
+      }
+    }
+    return const BoxDecoration(); // Default (no background change)
+  }
+
+  TextStyle _getTextStyle(int index) {
+    if (index == 2) {
+      if (widget.rowContents[index] == "Acknowledge") {
+        return const TextStyle(color: Color(0xFF10513F));
+      } else if (widget.rowContents[index] == "For checking of inspector") {
+        return const TextStyle(color: Color(0xFF663000));
+      } else if (widget.rowContents[index] == "Not Validated") {
+        return const TextStyle(color: Color(0xFF61220F));
+      }
+    }
+    return const TextStyle(color: Colors.black87); // Default text color
   }
 
   @override
@@ -41,16 +87,16 @@ class _MyCardState extends State<MyCard> {
               children: [
                 Row(
                   children: [
-                    const Text(
-                      'Checklist #432',
-                      style: TextStyle(
+                    Text(
+                      widget.mainTitle,
+                      style: const TextStyle(
                         fontSize: 16,
                         fontWeight: FontWeight.bold,
                         color: Colors.white,
                       ),
                     ),
                     const SizedBox(
-                        width: 8), // Spacing between text and security badge
+                        width: 8), // Spacing between text and subTitle badge
                     Container(
                       padding: const EdgeInsets.symmetric(
                           horizontal: 8, vertical: 4),
@@ -59,9 +105,9 @@ class _MyCardState extends State<MyCard> {
                             const Color(0xFFD4F4EC), // Updated background color
                         borderRadius: BorderRadius.circular(12),
                       ),
-                      child: const Text(
-                        'Security',
-                        style: TextStyle(
+                      child: Text(
+                        widget.subTitle,
+                        style: const TextStyle(
                           color: Color(0xFF10513F), // Updated text color
                           fontSize: 12,
                         ),
@@ -85,83 +131,31 @@ class _MyCardState extends State<MyCard> {
           if (_isExpanded)
             Column(
               children: [
-                Container(
-                  padding: const EdgeInsets.all(12.0),
-                  decoration: const BoxDecoration(
-                    color: Colors.white, // First row background color
-                  ),
-                  child: const Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      Text(
-                        'Project',
-                        style: TextStyle(
-                          color: Colors.grey,
+                ...List.generate(
+                  widget.rowTitles.length,
+                  (index) => Container(
+                    padding: const EdgeInsets.all(12.0),
+                    decoration: BoxDecoration(
+                      color: index.isEven ? Colors.white : Colors.grey[200]!,
+                    ),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Text(
+                          widget.rowTitles[index],
+                          style: const TextStyle(color: Colors.black87),
                         ),
-                      ),
-                      Text(
-                        '(Do not Select) Project A',
-                        style: TextStyle(
-                          color: Colors.black87,
-                        ),
-                      ),
-                    ],
-                  ),
-                ),
-                Container(
-                  padding: const EdgeInsets.all(12.0),
-                  decoration: const BoxDecoration(
-                    color:
-                        Color(0xFFF2F2F2), // Second row background color (grey)
-                  ),
-                  child: const Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      Text(
-                        'Location',
-                        style: TextStyle(
-                          color: Colors.grey,
-                        ),
-                      ),
-                      Text(
-                        'D02 - Balintawak',
-                        style: TextStyle(
-                          color: Colors.black87,
-                        ),
-                      ),
-                    ],
-                  ),
-                ),
-                Container(
-                  padding: const EdgeInsets.all(12.0),
-                  decoration: const BoxDecoration(
-                    color: Colors.white, // Third row background color
-                  ),
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      const Text(
-                        'Status',
-                        style: TextStyle(
-                          color: Colors.grey,
-                        ),
-                      ),
-                      Container(
-                        padding: const EdgeInsets.symmetric(
-                            horizontal: 8, vertical: 4),
-                        decoration: BoxDecoration(
-                          color: Colors.red.shade100,
-                          borderRadius: BorderRadius.circular(12),
-                        ),
-                        child: const Text(
-                          'Not Validated',
-                          style: TextStyle(
-                            color: Colors.red,
-                            fontSize: 12,
+                        Container(
+                          padding: const EdgeInsets.symmetric(
+                              horizontal: 8, vertical: 4),
+                          decoration: _getTextDecoration(index),
+                          child: Text(
+                            widget.rowContents[index],
+                            style: _getTextStyle(index),
                           ),
                         ),
-                      ),
-                    ],
+                      ],
+                    ),
                   ),
                 ),
                 // View Details Button
