@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:wilcon_phase2/module/homepage/widget/card_container_widget.dart';
+import 'package:wilcon_phase2/module/homepage/widget/draft_list_button_widget.dart';
+import 'package:wilcon_phase2/module/homepage/widget/dropdown_list_widget.dart';
 
 class HomePageBodyWidget extends StatefulWidget {
   const HomePageBodyWidget({super.key});
@@ -12,8 +15,16 @@ class _HomePageBodyWidgetState extends State<HomePageBodyWidget> {
   Widget build(BuildContext context) {
     return Expanded(
       child: Container(
-        color: Colors.grey,
-        child: const Center(child: Text('data')),
+        color: Colors.white,
+        child: const Column(
+          children: [
+            DropdownListWidget(),
+            SizedBox(height: 24),
+            DraftListButtonWidget(),
+            SizedBox(height: 24),
+            CardContainerWidget(),
+          ],
+        ),
       ),
     );
   }

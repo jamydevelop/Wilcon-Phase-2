@@ -15,7 +15,7 @@ class _SecurityTextWidgetState extends State<SecurityTextWidget> {
       child: Container(
         padding: const EdgeInsets.symmetric(horizontal: 12.0, vertical: 8.0),
         decoration: BoxDecoration(
-          color: Colors.grey[400],
+          color: const Color(0xFF8593A3), // Background color set to #8593A3
           borderRadius: BorderRadius.circular(20.0), // Rounded corners
         ),
         child: const Row(
