@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:wilcon_phase2/widget/dropdown_list_widget.dart';
+import 'package:wilcon_phase2/widget/checklist_modal/dropdown_checklist_widget.dart';
 import 'package:wilcon_phase2/widget/recent_checklist_body_widget.dart';
 
 class DraftPageBodyWidget extends StatefulWidget {
@@ -17,7 +17,7 @@ class _DraftPageBodyWidgetState extends State<DraftPageBodyWidget> {
         color: Colors.white,
         child: const Column(
           children: [
-            DropdownListWidget(),
+            DropdownChecklistWidget(),
             SizedBox(height: 24),
             RecentChecklistBodyWidget(),
           ],
