@@ -31,7 +31,7 @@ class _AppbarHomepageContainerWidgetState
               boxShadow: [
                 BoxShadow(
                   color: Colors.black.withOpacity(0.3), // Shadow color
-                  offset: Offset(0, 10), // Position the shadow underneath
+                  offset: const Offset(0, 10), // Position the shadow underneath
                   blurRadius: 20, // Blur effect of the shadow
                   spreadRadius: 5, // Spread radius of the shadow
                 ),
