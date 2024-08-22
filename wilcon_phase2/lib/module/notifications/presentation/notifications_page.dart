@@ -25,9 +25,8 @@ class _NotificationsPageState extends State<NotificationsPage> {
               shadowColor: Colors.black45, // Optional: To control shadow color
               child: NotificationAppbarContainerWidget(),
             ),
-            const SizedBox(
-              height: 12,
-            ),
+            const SizedBox(height: 23.69),
+            const SizedBox(height: 12),
             Expanded(
               child: Card(
                 margin: const EdgeInsets.all(0),
