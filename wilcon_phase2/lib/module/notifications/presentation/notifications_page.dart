@@ -27,30 +27,23 @@ class _NotificationsPageState extends State<NotificationsPage> {
               const SizedBox(height: 24),
               const CustomizedAppBar(),
               const BackToPrevScreen(),
+              const SizedBox(height: 12),
               const HeaderBar(
                 text: 'Notifications',
                 isYellow: false,
               ),
               const SizedBox(height: 24),
-              //const SizedBox(height: 12),
-
-              Container(
-                height: 12,
-                decoration: BoxDecoration(
-                  boxShadow: [
-                    BoxShadow(
-                      color: Colors.black
-                          .withOpacity(0.3), // Shadow color with opacity
-                      offset: const Offset(1, 0), // Shadow position
-                      blurRadius: 6, // Shadow blur radius
-                    ),
-                  ],
+              // Adding elevation to the NotificationBodyWidget
+              Expanded(
+                child: Card(
+                  elevation: 4.0, // Adjust the elevation value as needed
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(
+                        0.0), // Optional: add rounded corners
+                  ),
+                  child: const NotificationBodyWidget(),
                 ),
               ),
-
-              const Expanded(
-                  child:
-                      NotificationBodyWidget()), // Use Expanded to fill remaining space
             ],
           ),
         ),

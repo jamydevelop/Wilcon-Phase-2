@@ -21,7 +21,7 @@ class CustomizedAppBar extends StatelessWidget implements PreferredSizeWidget {
   Widget _wilconAppBar(BuildContext context) {
     return Container(
       padding: const EdgeInsets.symmetric(horizontal: 0.0),
-      //color: Colors.blue, // Change to your preferred color
+      color: Colors.transparent, // Change to your preferred color
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [

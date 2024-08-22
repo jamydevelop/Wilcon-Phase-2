@@ -16,7 +16,7 @@ class _RecentChecklistBodyWidgetState extends State<RecentChecklistBodyWidget> {
     return Expanded(
       child: Container(
         width: double.infinity,
-        padding: const EdgeInsets.all(0.0),
+        padding: const EdgeInsets.symmetric(horizontal: 12),
         color: const Color(0xFFF4F7FA), // Updated background color
         child: const SingleChildScrollView(
           child: Column(
