@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:wilcon_phase2/module/notifications/widgets/notification_appbar_container_widget.dart';
-//import 'package:wilcon_phase2/module/notifications/widgets/notification_appbar_container_widget.dart';
 import 'package:wilcon_phase2/module/notifications/widgets/notification_body_widget.dart';
 import 'package:wilcon_phase2/widget/sidebar_widget.dart';
 
@@ -21,7 +20,14 @@ class _NotificationsPageState extends State<NotificationsPage> {
         child: Column(
           mainAxisSize: MainAxisSize.max,
           children: [
-            const NotificationAppbarContainerWidget(),
+            const Material(
+              elevation: 4.0, // Adjust elevation for the floating effect
+              shadowColor: Colors.black45, // Optional: To control shadow color
+              child: NotificationAppbarContainerWidget(),
+            ),
+            const SizedBox(
+              height: 12,
+            ),
             Expanded(
               child: Card(
                 margin: const EdgeInsets.all(0),
