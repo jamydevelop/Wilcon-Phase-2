@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:wilcon_phase2/widget/customized_appbar/appbar_widget.dart';
-import 'package:wilcon_phase2/widget/customized_appbar/back_screen_widget.dart';
+import 'package:wilcon_phase2/module/notifications/widgets/notification_appbar_container_widget.dart';
 import 'package:wilcon_phase2/module/notifications/widgets/notification_body_widget.dart';
-import 'package:wilcon_phase2/widget/header_bar_widget.dart';
 import 'package:wilcon_phase2/widget/sidebar_widget.dart';
 
 class NotificationsPage extends StatefulWidget {
@@ -20,19 +18,21 @@ class _NotificationsPageState extends State<NotificationsPage> {
           const CustomSidebar(), // Make sure this is not const if it is not a const constructor
       body: SafeArea(
         child: Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 12.0),
+          padding: const EdgeInsets.symmetric(horizontal: 0.0),
           child: Column(
             mainAxisSize: MainAxisSize.max,
             children: [
-              const SizedBox(height: 24),
-              const CustomizedAppBar(),
-              const BackToPrevScreen(),
-              const SizedBox(height: 12),
-              const HeaderBar(
-                text: 'Notifications',
-                isYellow: false,
-              ),
-              const SizedBox(height: 24),
+              const NotificationAppbarContainerWidget(),
+
+              // const SizedBox(height: 24),
+              // const CustomizedAppBar(),
+              // const BackToPrevScreen(),
+              // const SizedBox(height: 12),
+              // const HeaderBar(
+              //   text: 'Notifications',
+              //   isYellow: false,
+              // ),
+              // const SizedBox(height: 24),
               // Adding elevation to the NotificationBodyWidget
               Expanded(
                 child: Card(

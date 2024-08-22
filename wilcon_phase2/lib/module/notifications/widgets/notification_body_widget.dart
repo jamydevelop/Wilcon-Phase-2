@@ -13,7 +13,7 @@ class _NotificationBodyWidgetState extends State<NotificationBodyWidget> {
   Widget build(BuildContext context) {
     return ListView.builder(
       padding: const EdgeInsets.only(
-          left: 0.0, right: 0.0, bottom: 16.0), // Adjusted padding
+          left: 12.0, right: 12.0, bottom: 16.0), // Adjusted padding
       itemCount: 15, // Number of cards to display
       itemBuilder: (context, index) {
         return Container(
