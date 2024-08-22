@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:wilcon_phase2/module/notifications/widgets/notification_appbar_container_widget.dart';
+//import 'package:wilcon_phase2/module/notifications/widgets/notification_appbar_container_widget.dart';
 import 'package:wilcon_phase2/module/notifications/widgets/notification_body_widget.dart';
 import 'package:wilcon_phase2/widget/sidebar_widget.dart';
 
@@ -17,35 +18,22 @@ class _NotificationsPageState extends State<NotificationsPage> {
       endDrawer:
           const CustomSidebar(), // Make sure this is not const if it is not a const constructor
       body: SafeArea(
-        child: Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 0.0),
-          child: Column(
-            mainAxisSize: MainAxisSize.max,
-            children: [
-              const NotificationAppbarContainerWidget(),
-
-              // const SizedBox(height: 24),
-              // const CustomizedAppBar(),
-              // const BackToPrevScreen(),
-              // const SizedBox(height: 12),
-              // const HeaderBar(
-              //   text: 'Notifications',
-              //   isYellow: false,
-              // ),
-              // const SizedBox(height: 24),
-              // Adding elevation to the NotificationBodyWidget
-              Expanded(
-                child: Card(
-                  elevation: 4.0, // Adjust the elevation value as needed
-                  shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(
-                        0.0), // Optional: add rounded corners
-                  ),
-                  child: const NotificationBodyWidget(),
+        child: Column(
+          mainAxisSize: MainAxisSize.max,
+          children: [
+            const NotificationAppbarContainerWidget(),
+            Expanded(
+              child: Card(
+                margin: const EdgeInsets.all(0),
+                color: Colors.white,
+                elevation: 1.0, // Adjust the elevation value as needed
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(0.0),
                 ),
+                child: const NotificationBodyWidget(),
               ),
-            ],
-          ),
+            ),
+          ],
         ),
       ),
     );
