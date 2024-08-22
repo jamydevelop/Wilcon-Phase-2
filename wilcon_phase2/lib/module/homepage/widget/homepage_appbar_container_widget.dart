@@ -5,16 +5,16 @@ import 'package:wilcon_phase2/widget/checklist_modal/dropdown_checklist_widget.d
 import 'package:wilcon_phase2/widget/customized_appbar/appbar_widget.dart';
 import 'package:wilcon_phase2/widget/project_modal/dropdown_project_widget.dart';
 
-class AppbarHomepageContainerWidget extends StatefulWidget {
-  const AppbarHomepageContainerWidget({super.key});
+class HomepageAppbarContainerWidget extends StatefulWidget {
+  const HomepageAppbarContainerWidget({super.key});
 
   @override
-  State<AppbarHomepageContainerWidget> createState() =>
-      _AppbarHomepageContainerWidgetState();
+  State<HomepageAppbarContainerWidget> createState() =>
+      _HomepageAppbarContainerWidgetState();
 }
 
-class _AppbarHomepageContainerWidgetState
-    extends State<AppbarHomepageContainerWidget> {
+class _HomepageAppbarContainerWidgetState
+    extends State<HomepageAppbarContainerWidget> {
   @override
   Widget build(BuildContext context) {
     return Stack(

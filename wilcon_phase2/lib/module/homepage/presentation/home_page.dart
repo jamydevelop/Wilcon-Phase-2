@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:wilcon_phase2/module/homepage/widget/appbar_homepage_container_widget.dart';
+import 'package:wilcon_phase2/module/homepage/widget/homepage_appbar_container_widget.dart';
 import 'package:wilcon_phase2/module/homepage/widget/home_page_body_widget.dart';
 import 'package:wilcon_phase2/widget/sidebar_widget.dart';
 
@@ -24,7 +24,7 @@ class _HomepageState extends State<Homepage> {
             child: Column(
               mainAxisSize: MainAxisSize.max,
               children: [
-                AppbarHomepageContainerWidget(),
+                HomepageAppbarContainerWidget(),
                 HomePageBodyWidget(),
               ],
             ),
