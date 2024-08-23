@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:wilcon_phase2/module/checklist/checklist_summary/presentation/checklist_summary_page.dart';
 
 class HomepageCardWidget extends StatefulWidget {
   final String mainTitle;
@@ -167,7 +168,12 @@ class _HomepageCardWidgetState extends State<HomepageCardWidget> {
                     width: double.infinity, // Full width
                     child: ElevatedButton(
                       onPressed: () {
-                        // Navigate to details
+                        Navigator.pushReplacement(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => const ChecklistSummaryPage(),
+                          ),
+                        );
                       },
                       style: ElevatedButton.styleFrom(
                         foregroundColor: Colors.green.shade900,
