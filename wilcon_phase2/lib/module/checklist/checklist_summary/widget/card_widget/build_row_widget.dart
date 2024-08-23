@@ -2,14 +2,14 @@ import 'package:flutter/material.dart';
 
 class BuildRowWidget extends StatelessWidget {
   final String label;
-  final String value;
+  final String? value;
   final Color backgroundColor;
   final bool isTopBorderActivate; // New parameter
 
   const BuildRowWidget({
     super.key,
     required this.label,
-    required this.value,
+    this.value,
     required this.backgroundColor,
     this.isTopBorderActivate = true, // Default value set to true
   });
@@ -32,16 +32,18 @@ class BuildRowWidget extends StatelessWidget {
       child: Row(
         children: [
           Expanded(
-            flex: 2,
+            flex: value == null ? 1 : 2,
             child: Text(
               label,
               style: const TextStyle(fontWeight: FontWeight.bold),
             ),
           ),
-          Expanded(
-            flex: 3,
-            child: Text(value),
-          ),
+          if (value !=
+              null) // Only include the second Expanded if value is not null
+            Expanded(
+              flex: 3,
+              child: Text(value!),
+            ),
         ],
       ),
     );
