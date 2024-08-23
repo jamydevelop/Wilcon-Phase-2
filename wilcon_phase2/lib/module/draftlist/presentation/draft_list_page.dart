@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:wilcon_phase2/module/draftlist/widget/draft_list_appbar_container_widget.dart';
 import 'package:wilcon_phase2/module/draftlist/widget/draft_list_page_body_widget.dart';
-import 'package:wilcon_phase2/widget/customized_appbar/appbar_widget.dart';
-import 'package:wilcon_phase2/widget/customized_appbar/back_screen_widget.dart';
-import 'package:wilcon_phase2/widget/header_bar_widget.dart';
 import 'package:wilcon_phase2/widget/sidebar_widget.dart';
 
 class DraftlistPage extends StatefulWidget {
@@ -25,15 +23,7 @@ class _DraftlistPageState extends State<DraftlistPage> {
             child: Column(
               mainAxisSize: MainAxisSize.max,
               children: [
-                CustomizedAppBar(),
-                BackToPrevScreen(),
-                SizedBox(height: 12),
-                HeaderBar(
-                  text: 'Draft List',
-                  isYellow: false,
-                ),
-                SizedBox(height: 48),
-                // SizedBox(height: 24),
+                DraftListAppbarContainerWidget(),
                 DraftlistPageBodyWidget(),
               ],
             ),
