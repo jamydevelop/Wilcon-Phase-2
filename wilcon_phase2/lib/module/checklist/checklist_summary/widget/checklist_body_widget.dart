@@ -1,7 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:wilcon_phase2/module/checklist/checklist_summary/widget/button_widget/filled_button_widget.dart';
+import 'package:wilcon_phase2/module/checklist/checklist_summary/widget/button_widget/only_text_button_widget.dart';
+import 'package:wilcon_phase2/module/checklist/checklist_summary/widget/button_widget/outlined_button_widget.dart';
 import 'package:wilcon_phase2/module/checklist/checklist_summary/widget/card_widget/add_comment_textfield_widget.dart';
 import 'package:wilcon_phase2/module/checklist/checklist_summary/widget/card_widget/first_card_body_widget.dart';
 import 'package:wilcon_phase2/module/checklist/checklist_summary/widget/card_widget/header_widget.dart';
+import 'package:wilcon_phase2/module/checklist/checklist_summary/widget/card_widget/history_update_card_widget.dart';
 import 'package:wilcon_phase2/module/checklist/checklist_summary/widget/card_widget/second_card_body_widget.dart';
 import 'package:wilcon_phase2/module/checklist/checklist_summary/widget/card_widget/third_card_body_widget.dart';
 import 'package:wilcon_phase2/module/checklist/checklist_summary/widget/checklist_appbar_container_widget.dart';
@@ -44,6 +48,17 @@ class _ChecklistBodyWidgetState extends State<ChecklistBodyWidget> {
                   ThirdCardBodyWidget(),
                   Divider(thickness: 1, color: Colors.grey),
                   AddCommentTextfieldWidget(),
+                  SizedBox(height: 12),
+                  HeaderWidget(title: 'History'),
+                  SizedBox(height: 12),
+                  HistoryUpdateCardWidget(),
+                  SizedBox(height: 12),
+                  FilledButtonWidget(),
+                  SizedBox(height: 12),
+                  OutlinedButtonWidget(),
+                  SizedBox(height: 12),
+                  OnlyTextButtonWidget(),
+                  SizedBox(height: 12),
                 ],
               ),
             ),
