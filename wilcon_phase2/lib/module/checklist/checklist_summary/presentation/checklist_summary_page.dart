@@ -27,7 +27,7 @@ class _ChecklistSummaryPageState extends State<ChecklistSummaryPage> {
             ),
             const SizedBox(height: 12),
             Expanded(
-              child: SizedBox(
+              child: SingleChildScrollView(
                 child: Container(
                   margin: const EdgeInsets.all(12),
                   width: double.infinity,
@@ -35,6 +35,8 @@ class _ChecklistSummaryPageState extends State<ChecklistSummaryPage> {
                   child: Column(
                     children: <Widget>[
                       _textLabel(),
+                      _textBody(),
+                      const Divider(thickness: 1, color: Colors.grey),
                       _textBody(),
                     ],
                   ),
@@ -138,7 +140,10 @@ class _ChecklistSummaryPageState extends State<ChecklistSummaryPage> {
                   ),
                   child: Text(
                     value,
-                    style: const TextStyle(color: Colors.red),
+                    style: const TextStyle(
+                      color: Color(0xFF61220F),
+                      fontWeight: FontWeight.w600,
+                    ),
                   ),
                 ),
               ],
