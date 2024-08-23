@@ -24,17 +24,14 @@ class _ChecklistSummaryPageState extends State<ChecklistSummaryPage> {
               shadowColor: Colors.black45, // Optional: To control shadow color
               child: ChecklistAppbarContainerWidget(),
             ),
-            const SizedBox(height: 23.69),
             const SizedBox(height: 12),
             Expanded(
-              child: Card(
-                margin: const EdgeInsets.all(0),
-                color: Colors.white,
-                elevation: 1.0, // Adjust the elevation value as needed
-                shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(0.0),
+              child: SizedBox(
+                child: Container(
+                  width: double.infinity,
+                  color: Colors.teal,
+                  child: const Text("data"),
                 ),
-                child: const Text('Body'),
               ),
             ),
           ],

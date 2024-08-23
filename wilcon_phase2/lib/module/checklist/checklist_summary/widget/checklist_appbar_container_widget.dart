@@ -29,6 +29,11 @@ class _ChecklistAppbarContainerWidgetState
               text: 'Checklist #432',
               isYellow: false,
             ),
+            SizedBox(height: 12),
+            Align(
+              alignment: Alignment.centerLeft,
+              child: Text('Input simple instruction here. Make it short.'),
+            ),
             SizedBox(height: 24),
           ],
         ),
