@@ -4,12 +4,14 @@ class BuildRowWidget extends StatelessWidget {
   final String label;
   final String value;
   final Color backgroundColor;
+  final bool isTopBorderActivate; // New parameter
 
   const BuildRowWidget({
     super.key,
     required this.label,
     required this.value,
     required this.backgroundColor,
+    this.isTopBorderActivate = true, // Default value set to true
   });
 
   @override
@@ -18,9 +20,11 @@ class BuildRowWidget extends StatelessWidget {
       decoration: BoxDecoration(
         color: backgroundColor,
         border: backgroundColor == Colors.grey[200]
-            ? const Border(
-                top: BorderSide(color: Colors.grey, width: 1.0),
-                bottom: BorderSide(color: Colors.grey, width: 1.0),
+            ? Border(
+                top: isTopBorderActivate // Conditional check for top border
+                    ? const BorderSide(color: Colors.grey, width: 1.0)
+                    : BorderSide.none,
+                bottom: const BorderSide(color: Colors.grey, width: 1.0),
               )
             : null,
       ),

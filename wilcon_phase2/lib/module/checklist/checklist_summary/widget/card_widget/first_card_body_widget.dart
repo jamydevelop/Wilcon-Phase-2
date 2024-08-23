@@ -2,14 +2,14 @@ import 'package:flutter/material.dart';
 import 'package:wilcon_phase2/module/checklist/checklist_summary/widget/card_widget/build_row_widget.dart';
 import 'package:wilcon_phase2/module/checklist/checklist_summary/widget/card_widget/build_row_with_badge.dart';
 
-class CardBodyWidget extends StatefulWidget {
-  const CardBodyWidget({super.key});
+class FirstCardBodyWidget extends StatefulWidget {
+  const FirstCardBodyWidget({super.key});
 
   @override
-  State<CardBodyWidget> createState() => _CardBodyWidgetState();
+  State<FirstCardBodyWidget> createState() => _FirstCardBodyWidgetState();
 }
 
-class _CardBodyWidgetState extends State<CardBodyWidget> {
+class _FirstCardBodyWidgetState extends State<FirstCardBodyWidget> {
   @override
   Widget build(BuildContext context) {
     return Column(

@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:wilcon_phase2/module/checklist/checklist_summary/widget/card_widget/card_body_widget.dart';
+import 'package:wilcon_phase2/module/checklist/checklist_summary/widget/card_widget/first_card_body_widget.dart';
+import 'package:wilcon_phase2/module/checklist/checklist_summary/widget/card_widget/header_widget.dart';
+import 'package:wilcon_phase2/module/checklist/checklist_summary/widget/card_widget/second_card_body_widget.dart';
 import 'package:wilcon_phase2/module/checklist/checklist_summary/widget/checklist_appbar_container_widget.dart';
 import 'package:wilcon_phase2/module/checklist/checklist_summary/widget/text_label_widget.dart';
 import 'package:wilcon_phase2/widget/sidebar_widget.dart';
@@ -37,8 +39,11 @@ class _ChecklistSummaryPageState extends State<ChecklistSummaryPage> {
                   child: const Column(
                     children: <Widget>[
                       TextLabelWidget(),
-                      CardBodyWidget(),
+                      FirstCardBodyWidget(),
                       Divider(thickness: 1, color: Colors.grey),
+                      SecondCardBodyWidget(),
+                      SizedBox(height: 12),
+                      HeaderWidget(title: 'Comments'),
                     ],
                   ),
                 ),
