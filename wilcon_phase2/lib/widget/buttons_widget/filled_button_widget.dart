@@ -14,6 +14,7 @@ class _FilledButtonWidgetState extends State<FilledButtonWidget> {
   Widget build(BuildContext context) {
     return SizedBox(
       width: double.infinity,
+      height: 50,
       child: ElevatedButton(
         style: ElevatedButton.styleFrom(
           padding: const EdgeInsets.all(16.0),
