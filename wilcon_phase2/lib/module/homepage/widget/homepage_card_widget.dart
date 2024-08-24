@@ -182,6 +182,7 @@ class _HomepageCardWidgetState extends State<HomepageCardWidget> {
                         shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(8),
                         ),
+                        minimumSize: const Size(double.infinity, 44),
                       ),
                       child: const Row(
                         mainAxisSize: MainAxisSize.min,
