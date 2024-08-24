@@ -37,26 +37,32 @@ class _ChecklistItemBodyWidgetState extends State<ChecklistItemBodyWidget> {
                   ChecklistItemCardWidget(
                     description:
                         "Complete installed perimeter fence and perimeter lights.",
+                    isCompiled: false,
                   ),
                   ChecklistItemCardWidget(
                     description:
                         "No bunk house/barracks on-site (Except for the warehouse of contractor’s tools and equipment)",
+                    isCompiled: true,
                   ),
                   ChecklistItemCardWidget(
                     description:
                         "With a separate entrance and exits for workers and delivery trucks",
+                    isCompiled: false,
                   ),
                   ChecklistItemCardWidget(
                     description:
                         "With a temporary warehouse for Wilcon Engineering materials",
+                    isCompiled: true,
                   ),
                   ChecklistItemCardWidget(
                     description:
                         "Certified safety officer on duty (COSH) - provide a copy of the Certificate to Wilcon Project Engineer and Corporate Security Setter",
+                    isCompiled: true,
                   ),
                   ChecklistItemCardWidget(
                     description:
                         "Safety and security signages are in place in noticeable areas",
+                    isCompiled: true,
                   ),
                   Divider(height: 1),
                   SizedBox(height: 12),
