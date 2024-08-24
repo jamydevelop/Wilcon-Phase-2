@@ -2,8 +2,13 @@ import 'package:flutter/material.dart';
 
 class CheklistPartButtonWidget extends StatelessWidget {
   final String title;
+  final VoidCallback? onTap; // Add this line
 
-  const CheklistPartButtonWidget({required this.title, super.key});
+  const CheklistPartButtonWidget({
+    required this.title,
+    this.onTap, // Add this line
+    super.key,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -40,9 +45,7 @@ class CheklistPartButtonWidget extends StatelessWidget {
           ),
         ),
         trailing: const Icon(Icons.arrow_forward, color: Color(0xFF166E16)),
-        onTap: () {
-          // Add your navigation or action code here
-        },
+        onTap: onTap, // Modify this line to use the onTap parameter
       ),
     );
   }

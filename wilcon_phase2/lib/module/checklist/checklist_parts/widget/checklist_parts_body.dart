@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:wilcon_phase2/module/checklist/checklist_item/presentation/checklist_item_page.dart';
 import 'package:wilcon_phase2/module/checklist/checklist_parts/widget/checklist_parts_appbar_container_widget.dart';
 import 'package:wilcon_phase2/module/checklist/checklist_parts/widget/cheklist_part_button_widget.dart';
 
@@ -30,25 +31,89 @@ class _ChecklistPartsBodyState extends State<ChecklistPartsBody> {
                 right: 12,
               ),
               width: double.infinity,
-              child: const Column(
+              child: Column(
                 children: <Widget>[
                   CheklistPartButtonWidget(
                     title: 'Part A: Pre-Construction Requirements',
+                    onTap: () {
+                      Navigator.pushReplacement(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => const ChecklistItemPage()));
+                    },
                   ),
                   CheklistPartButtonWidget(
-                      title: 'Part B: Accessing the Construction Area'),
+                    title: 'Part B: Accessing the Construction Area',
+                    onTap: () {
+                      Navigator.pushReplacement(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => const ChecklistItemPage()));
+                    },
+                  ),
                   CheklistPartButtonWidget(
-                      title: 'Part C: Restriction in using Wilcon Equipment'),
+                    title: 'Part C: Restriction in using Wilcon Equipment',
+                    onTap: () {
+                      Navigator.pushReplacement(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => const ChecklistItemPage()));
+                    },
+                  ),
                   CheklistPartButtonWidget(
-                      title: 'Part D: Cleanliness and Sanitation'),
-                  CheklistPartButtonWidget(title: 'Part E: Medical Facilities'),
-                  CheklistPartButtonWidget(title: 'Part F: Fire Safety'),
+                    title: 'Part D: Cleanliness and Sanitation',
+                    onTap: () {
+                      Navigator.pushReplacement(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => const ChecklistItemPage()));
+                    },
+                  ),
                   CheklistPartButtonWidget(
-                      title: 'Part G: Supervision and Monitoring'),
+                    title: 'Part E: Medical Facilities',
+                    onTap: () {
+                      Navigator.pushReplacement(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => const ChecklistItemPage()));
+                    },
+                  ),
                   CheklistPartButtonWidget(
-                      title: 'Part H: On-sites rules and Regulations'),
+                    title: 'Part F: Fire Safety',
+                    onTap: () {
+                      Navigator.pushReplacement(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => const ChecklistItemPage()));
+                    },
+                  ),
                   CheklistPartButtonWidget(
-                      title: 'Part I: Standard Utilities & Equipment'),
+                    title: 'Part G: Supervision and Monitoring',
+                    onTap: () {
+                      Navigator.pushReplacement(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => const ChecklistItemPage()));
+                    },
+                  ),
+                  CheklistPartButtonWidget(
+                    title: 'Part H: On-sites rules and Regulations',
+                    onTap: () {
+                      Navigator.pushReplacement(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => const ChecklistItemPage()));
+                    },
+                  ),
+                  CheklistPartButtonWidget(
+                    title: 'Part I: Standard Utilities & Equipment',
+                    onTap: () {
+                      Navigator.pushReplacement(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => const ChecklistItemPage()));
+                    },
+                  ),
                 ],
               ),
             ),
