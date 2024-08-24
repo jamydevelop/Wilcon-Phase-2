@@ -50,7 +50,6 @@ class _ChecklistBodyWidgetState extends State<ChecklistBodyWidget> {
                   HeaderWidget(title: 'History'),
                   SizedBox(height: 12),
                   HistoryUpdateCardWidget(),
-                  SizedBox(height: 12),
                 ],
               ),
             ),
