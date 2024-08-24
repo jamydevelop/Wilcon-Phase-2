@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:wilcon_phase2/module/checklist/checklist_item/widget/checklist_item_appbar_container_widget.dart';
 import 'package:wilcon_phase2/module/checklist/checklist_item/widget/checklist_item_card_widget.dart';
+import 'package:wilcon_phase2/module/checklist/checklist_item/widget/checklist_item_image_text_container_widget.dart';
 import 'package:wilcon_phase2/module/checklist/checklist_summary/widget/card_widget/header_widget.dart';
 
 class ChecklistItemBodyWidget extends StatefulWidget {
@@ -67,6 +68,8 @@ class _ChecklistItemBodyWidgetState extends State<ChecklistItemBodyWidget> {
                   Divider(height: 1),
                   SizedBox(height: 12),
                   HeaderWidget(title: 'Images'),
+                  SizedBox(height: 12),
+                  ChecklistItemImageTextContainerWidget(),
                 ],
               ),
             ),
