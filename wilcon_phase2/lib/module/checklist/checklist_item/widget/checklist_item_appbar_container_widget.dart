@@ -4,7 +4,7 @@ import 'package:wilcon_phase2/widget/customized_appbar/back_screen_widget.dart';
 import 'package:wilcon_phase2/widget/header_bar_widget.dart';
 
 class ChecklistItemAppbarContainerWidget extends StatefulWidget {
-  const ChecklistItemAppbarContainerWidget({super.key});
+  const ChecklistItemAppbarContainerWidget({super.key, required String title});
 
   @override
   State<ChecklistItemAppbarContainerWidget> createState() =>

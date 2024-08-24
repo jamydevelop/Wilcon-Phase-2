@@ -33,7 +33,8 @@ class _ChecklistPartsBodyState extends State<ChecklistPartsBody> {
               child: const Column(
                 children: <Widget>[
                   CheklistPartButtonWidget(
-                      title: 'Part A: Pre-Construction Requirements'),
+                    title: 'Part A: Pre-Construction Requirements',
+                  ),
                   CheklistPartButtonWidget(
                       title: 'Part B: Accessing the Construction Area'),
                   CheklistPartButtonWidget(
