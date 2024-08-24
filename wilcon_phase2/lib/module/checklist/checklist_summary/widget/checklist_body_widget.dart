@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:wilcon_phase2/module/checklist/checklist_summary/widget/button_widget/filled_button_widget.dart';
-import 'package:wilcon_phase2/module/checklist/checklist_summary/widget/button_widget/only_text_button_widget.dart';
-import 'package:wilcon_phase2/module/checklist/checklist_summary/widget/button_widget/outlined_button_widget.dart';
+import 'package:wilcon_phase2/widget/buttons_widget/filled_button_widget.dart';
+import 'package:wilcon_phase2/widget/buttons_widget/only_text_button_widget.dart';
+import 'package:wilcon_phase2/widget/buttons_widget/outlined_button_widget.dart';
 import 'package:wilcon_phase2/module/checklist/checklist_summary/widget/card_widget/add_comment_textfield_widget.dart';
 import 'package:wilcon_phase2/module/checklist/checklist_summary/widget/card_widget/first_card_body_widget.dart';
 import 'package:wilcon_phase2/module/checklist/checklist_summary/widget/card_widget/header_widget.dart';
@@ -53,11 +53,11 @@ class _ChecklistBodyWidgetState extends State<ChecklistBodyWidget> {
                   SizedBox(height: 12),
                   HistoryUpdateCardWidget(),
                   SizedBox(height: 12),
-                  FilledButtonWidget(),
+                  FilledButtonWidget(titleText: 'View Checklist'),
                   SizedBox(height: 12),
-                  OutlinedButtonWidget(),
+                  OutlinedButtonWidget(titleText: 'Edit'),
                   SizedBox(height: 12),
-                  OnlyTextButtonWidget(),
+                  OnlyTextButtonWidget(titleText: 'Delete'),
                   SizedBox(height: 12),
                 ],
               ),

@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 
 class FilledButtonWidget extends StatefulWidget {
-  const FilledButtonWidget({super.key});
+  final String titleText;
+
+  const FilledButtonWidget({super.key, required this.titleText});
 
   @override
   State<FilledButtonWidget> createState() => _FilledButtonWidgetState();
@@ -23,9 +25,9 @@ class _FilledButtonWidgetState extends State<FilledButtonWidget> {
         onPressed: () {
           // Add your onPressed action here
         },
-        child: const Text(
-          'View Checklist',
-          style: TextStyle(
+        child: Text(
+          widget.titleText,
+          style: const TextStyle(
             color: Color(0xFFF4F7FA), // Text color
             fontSize: 16.0,
             fontWeight: FontWeight.w600,
