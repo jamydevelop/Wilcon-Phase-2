@@ -28,7 +28,7 @@ class _ChecklistItemModalWidgetState extends State<ChecklistItemModalWidget> {
               // ),
               Container(
                 width: MediaQuery.of(context).size.width * 0.9,
-                height: MediaQuery.of(context).size.height * 0.8,
+                height: MediaQuery.of(context).size.height * 0.87,
                 decoration: BoxDecoration(
                   color: Colors.white,
                   borderRadius: BorderRadius.circular(4.0),
@@ -42,9 +42,12 @@ class _ChecklistItemModalWidgetState extends State<ChecklistItemModalWidget> {
                       color: Colors.white,
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.end,
-                        children: [_iconClose()],
+                        children: [
+                          _iconClose(),
+                        ],
                       ),
                     ),
+                    const SizedBox(height: 10),
                     _imageModalWidget(),
                   ],
                 ),
@@ -58,7 +61,9 @@ class _ChecklistItemModalWidgetState extends State<ChecklistItemModalWidget> {
 
   Widget _iconClose() {
     return GestureDetector(
-      onTap: () {},
+      onTap: () {
+        Navigator.of(context).pop();
+      },
       child: const Icon(Icons.close_outlined),
     );
   }
@@ -70,7 +75,7 @@ class _ChecklistItemModalWidgetState extends State<ChecklistItemModalWidget> {
         'assets/images/construction.jpg',
         fit: BoxFit.cover,
         width: MediaQuery.of(context).size.width * 0.9,
-        height: MediaQuery.of(context).size.height * 0.7,
+        height: MediaQuery.of(context).size.height * 0.8,
       ),
     );
   }
