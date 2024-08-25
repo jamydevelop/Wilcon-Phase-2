@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:wilcon_phase2/module/checklist/checklist_item/widget/checklist_item_clickable_text_img_widget.dart';
 import 'package:wilcon_phase2/module/checklist/checklist_not_compiled/widget/checklist_not_compiled_appbar_container_widget.dart';
+import 'package:wilcon_phase2/widget/build_row_widget.dart';
 
 class ChecklistNotCompiledBodyWidget extends StatefulWidget {
   const ChecklistNotCompiledBodyWidget({super.key});
@@ -31,8 +33,33 @@ class _ChecklistNotCompiledBodyWidgetState
                 right: 12,
               ),
               width: double.infinity,
-              child: const Column(
-                children: <Widget>[],
+              child: Column(
+                children: <Widget>[
+                  BuildRowWidget(
+                    label: 'No of Violation',
+                    value: '10',
+                    backgroundColor: Colors.grey[200]!,
+                    isTopBorderActivate: false,
+                  ),
+                  const BuildRowWidget(
+                    label: 'Remarks',
+                    value: '10',
+                    backgroundColor: Colors.white,
+                    isTopBorderActivate: false,
+                  ),
+                  BuildRowWidget(
+                    label: 'Image',
+                    customWidget: const ChecklistItemClickableTextImgWidget(),
+                    backgroundColor: Colors.grey[200]!,
+                    isTopBorderActivate: true,
+                  ),
+                  const BuildRowWidget(
+                    label: '',
+                    customWidget: ChecklistItemClickableTextImgWidget(),
+                    backgroundColor: Colors.white,
+                    isTopBorderActivate: false,
+                  ),
+                ],
               ),
             ),
           ),

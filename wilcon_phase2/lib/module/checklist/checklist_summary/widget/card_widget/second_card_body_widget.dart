@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:wilcon_phase2/module/checklist/checklist_summary/widget/card_widget/build_row_widget.dart';
+import 'package:wilcon_phase2/widget/build_row_widget.dart';
 
 class SecondCardBodyWidget extends StatefulWidget {
   const SecondCardBodyWidget({super.key});

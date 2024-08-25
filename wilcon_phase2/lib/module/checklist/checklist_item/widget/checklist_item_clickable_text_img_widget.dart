@@ -15,23 +15,26 @@ class _ChecklistItemClickableTextImgWidgetState
     extends State<ChecklistItemClickableTextImgWidget> {
   @override
   Widget build(BuildContext context) {
-    return GestureDetector(
-      onTap: () {
-        ScaffoldMessenger.of(context).showSnackBar(
-          const SnackBar(
-            content: Text('Text clicked!'),
+    return Container(
+      alignment: Alignment.centerLeft, // Force alignment to the left
+      child: GestureDetector(
+        onTap: () {
+          ScaffoldMessenger.of(context).showSnackBar(
+            const SnackBar(
+              content: Text('Text clicked!'),
+            ),
+          );
+        },
+        child: Text(
+          'picture.jpg',
+          style: TextStyle(
+            color: Colors.green,
+            decoration: TextDecoration.underline,
+            decorationColor: Colors.green,
+            fontWeight:
+                widget.isInContainer ? FontWeight.bold : FontWeight.normal,
+            fontSize: 12,
           ),
-        );
-      },
-      child: Text(
-        'picture.jpg',
-        style: TextStyle(
-          color: Colors.green,
-          decoration: TextDecoration.underline,
-          decorationColor: Colors.green,
-          fontWeight:
-              widget.isInContainer ? FontWeight.bold : FontWeight.normal,
-          fontSize: 12,
         ),
       ),
     );

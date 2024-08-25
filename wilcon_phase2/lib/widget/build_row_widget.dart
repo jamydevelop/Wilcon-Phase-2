@@ -4,14 +4,16 @@ class BuildRowWidget extends StatelessWidget {
   final String label;
   final String? value;
   final Color backgroundColor;
-  final bool isTopBorderActivate; // New parameter
+  final bool isTopBorderActivate;
+  final Widget? customWidget;
 
   const BuildRowWidget({
     super.key,
     required this.label,
     this.value,
     required this.backgroundColor,
-    this.isTopBorderActivate = true, // Default value set to true
+    this.isTopBorderActivate = true,
+    this.customWidget,
   });
 
   @override
@@ -21,7 +23,7 @@ class BuildRowWidget extends StatelessWidget {
         color: backgroundColor,
         border: backgroundColor == Colors.grey[200]
             ? Border(
-                top: isTopBorderActivate // Conditional check for top border
+                top: isTopBorderActivate
                     ? const BorderSide(color: Colors.grey, width: 1.0)
                     : BorderSide.none,
                 bottom: const BorderSide(color: Colors.grey, width: 1.0),
@@ -30,19 +32,34 @@ class BuildRowWidget extends StatelessWidget {
       ),
       padding: const EdgeInsets.symmetric(vertical: 10.0, horizontal: 10.0),
       child: Row(
+        crossAxisAlignment:
+            CrossAxisAlignment.start, // Align all children to the start
         children: [
           Expanded(
-            flex: value == null ? 1 : 2,
+            flex:
+                2, // Adjust flex values so that label, value, and customWidget align
             child: Text(
               label,
               style: const TextStyle(fontWeight: FontWeight.bold),
+              textAlign: TextAlign.left, // Ensure text is aligned to the left
             ),
           ),
-          if (value !=
-              null) // Only include the second Expanded if value is not null
+          if (value != null)
             Expanded(
               flex: 3,
-              child: Text(value!),
+              child: Text(
+                value!,
+                textAlign:
+                    TextAlign.left, // Ensure value text is aligned to the left
+              ),
+            ),
+          if (customWidget != null)
+            Expanded(
+              flex: 3, // Ensure the customWidget is aligned similarly
+              child: Align(
+                alignment: Alignment.centerLeft,
+                child: customWidget!,
+              ),
             ),
         ],
       ),
