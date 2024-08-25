@@ -75,7 +75,7 @@ class _ChecklistItemModalWidgetState extends State<ChecklistItemModalWidget> {
         'assets/images/construction.jpg',
         fit: BoxFit.cover,
         width: MediaQuery.of(context).size.width * 0.9,
-        height: MediaQuery.of(context).size.height * 0.8,
+        height: MediaQuery.of(context).size.height * 0.806,
       ),
     );
   }
