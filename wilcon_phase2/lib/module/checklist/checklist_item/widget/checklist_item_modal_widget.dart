@@ -13,54 +13,64 @@ class _ChecklistItemModalWidgetState extends State<ChecklistItemModalWidget> {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-        backgroundColor: Colors.grey,
+        backgroundColor: Colors.transparent,
         body: Center(
           child: Column(
-            crossAxisAlignment: CrossAxisAlignment.center,
             mainAxisAlignment: MainAxisAlignment.center,
+            crossAxisAlignment: CrossAxisAlignment.center,
             children: [
-              Align(
-                alignment: Alignment.topRight,
-                child: IconButton(
-                  icon: const Icon(Icons.close_outlined, color: Colors.black),
-                  onPressed: () {
-                    Navigator.of(context).pop();
-                  },
-                ),
-              ),
+              // Container(
+              //   decoration: const BoxDecoration(color: Colors.white),
+              //   child: Align(
+              //     alignment: Alignment.topRight,
+              //     child: _iconClose(),
+              //   ),
+              // ),
               Container(
                 width: MediaQuery.of(context).size.width * 0.9,
                 height: MediaQuery.of(context).size.height * 0.8,
                 decoration: BoxDecoration(
                   color: Colors.white,
-                  borderRadius: BorderRadius.circular(16.0),
+                  borderRadius: BorderRadius.circular(4.0),
                 ),
-                padding: const EdgeInsets.all(16.0),
-                child: ClipRRect(
-                  borderRadius: BorderRadius.circular(16.0),
-                  child: Stack(
-                    children: [
-                      Image.asset(
-                        'assets/images/construction.jpg',
-                        fit: BoxFit.cover,
-                        width: double.infinity,
-                        height: double.infinity,
+                padding: const EdgeInsets.all(14),
+                child: Column(
+                  children: <Widget>[
+                    Container(
+                      padding: const EdgeInsets.all(0),
+                      margin: const EdgeInsets.all(0),
+                      color: Colors.white,
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.end,
+                        children: [_iconClose()],
                       ),
-                      Positioned.fill(
-                        child: Container(
-                          decoration: BoxDecoration(
-                            color: Colors.white.withOpacity(0.0),
-                            borderRadius: BorderRadius.circular(16.0),
-                          ),
-                        ),
-                      ),
-                    ],
-                  ),
+                    ),
+                    _imageModalWidget(),
+                  ],
                 ),
               ),
             ],
           ),
         ),
+      ),
+    );
+  }
+
+  Widget _iconClose() {
+    return GestureDetector(
+      onTap: () {},
+      child: const Icon(Icons.close_outlined),
+    );
+  }
+
+  Widget _imageModalWidget() {
+    return ClipRRect(
+      borderRadius: BorderRadius.circular(4.0),
+      child: Image.asset(
+        'assets/images/construction.jpg',
+        fit: BoxFit.cover,
+        width: MediaQuery.of(context).size.width * 0.9,
+        height: MediaQuery.of(context).size.height * 0.7,
       ),
     );
   }
