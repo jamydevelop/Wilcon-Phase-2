@@ -16,21 +16,23 @@ class _ChecklistItemClickableTextImgWidgetState
     extends State<ChecklistItemClickableTextImgWidget> {
   @override
   Widget build(BuildContext context) {
-    return Container(
-      alignment: Alignment.centerLeft, // Force alignment to the left
-      child: GestureDetector(
-        onTap: () {
-          _showDropdownModal(context); // Call the method here
-        },
-        child: Text(
-          'picture.jpg',
-          style: TextStyle(
-            color: Colors.green,
-            decoration: TextDecoration.underline,
-            decorationColor: Colors.green,
-            fontWeight:
-                widget.isInContainer ? FontWeight.bold : FontWeight.normal,
-            fontSize: 12,
+    return SafeArea(
+      child: Container(
+        alignment: Alignment.centerLeft, // Force alignment to the left
+        child: GestureDetector(
+          onTap: () {
+            _showDropdownModal(context); // Call the method here
+          },
+          child: Text(
+            'picture.jpg',
+            style: TextStyle(
+              color: Colors.green,
+              decoration: TextDecoration.underline,
+              decorationColor: Colors.green,
+              fontWeight:
+                  widget.isInContainer ? FontWeight.bold : FontWeight.normal,
+              fontSize: 12,
+            ),
           ),
         ),
       ),

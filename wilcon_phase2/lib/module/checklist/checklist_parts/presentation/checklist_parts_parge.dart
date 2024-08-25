@@ -12,12 +12,14 @@ class ChecklistPartsParge extends StatefulWidget {
 class _ChecklistPartsPargeState extends State<ChecklistPartsParge> {
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
-      backgroundColor: Colors.white, //*********** COLOR BLUE ***************
-      endDrawer:
-          CustomSidebar(), // Make sure this is not const if it is not a const constructor
-      body: SafeArea(
-        child: ChecklistPartsBody(),
+    return const SafeArea(
+      child: Scaffold(
+        backgroundColor: Colors.white, //*********** COLOR BLUE ***************
+        endDrawer:
+            CustomSidebar(), // Make sure this is not const if it is not a const constructor
+        body: SafeArea(
+          child: ChecklistPartsBody(),
+        ),
       ),
     );
   }

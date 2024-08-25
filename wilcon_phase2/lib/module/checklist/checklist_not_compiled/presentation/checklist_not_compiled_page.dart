@@ -13,12 +13,14 @@ class ChecklistNotCompiledPage extends StatefulWidget {
 class _ChecklistNotCompiledPageState extends State<ChecklistNotCompiledPage> {
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
-      backgroundColor: Colors.white, //*********** COLOR BLUE ***************
-      endDrawer:
-          CustomSidebar(), // Make sure this is not const if it is not a const constructor
-      body: SafeArea(
-        child: ChecklistNotCompiledBodyWidget(),
+    return const SafeArea(
+      child: Scaffold(
+        backgroundColor: Colors.white, //*********** COLOR BLUE ***************
+        endDrawer:
+            CustomSidebar(), // Make sure this is not const if it is not a const constructor
+        body: SafeArea(
+          child: ChecklistNotCompiledBodyWidget(),
+        ),
       ),
     );
   }
