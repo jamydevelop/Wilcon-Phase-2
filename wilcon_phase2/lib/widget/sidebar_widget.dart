@@ -1,8 +1,6 @@
-import 'dart:io';
-
 import 'package:flutter/material.dart';
+import 'package:wilcon_phase2/module/auth/presentation/login/login_page.dart';
 import 'package:wilcon_phase2/module/homepage/presentation/home_page.dart';
-// Import your pages
 
 class CustomSidebar extends StatelessWidget {
   const CustomSidebar({super.key});
@@ -112,8 +110,12 @@ class CustomSidebar extends StatelessWidget {
                           vertical: 16.0), // Button height
                     ),
                     onPressed: () {
-                      exit(0);
+                      // exit(0);
                       // Define the action for the button here
+                      Navigator.pushReplacement(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => const LoginPage()));
                     },
                     child: const Text('Logout'),
                   ),

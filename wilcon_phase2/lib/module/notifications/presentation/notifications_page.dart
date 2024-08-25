@@ -35,15 +35,25 @@ class _NotificationsPageState extends State<NotificationsPage> {
                 shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(0.0),
                 ),
-                child: const Column(
+                child: Column(
                   children: [
                     // Wrap NotificationBodyWidget with Expanded
-                    Expanded(child: NotificationBodyWidget()),
+                    const Expanded(child: NotificationBodyWidget()),
                     // Or you can also wrap FilledButtonWidget with Padding or SizedBox to adjust its position
                     Padding(
-                      padding: EdgeInsets.all(8.0),
+                      padding: const EdgeInsets.all(8.0),
                       child: FilledButtonWidget(
                         titleText: 'Load More',
+                        onPress: () {
+                          ScaffoldMessenger.of(context).showSnackBar(
+                            const SnackBar(
+                              content: Text('Load More Button Pressed!'),
+                              duration: Duration(
+                                  seconds:
+                                      2), // Duration the SnackBar is displayed
+                            ),
+                          );
+                        },
                       ),
                     ),
                   ],

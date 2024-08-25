@@ -3,8 +3,9 @@ import 'package:wilcon_phase2/module/checklist/checklist_parts/presentation/chec
 
 class FilledButtonWidget extends StatefulWidget {
   final String titleText;
+  final VoidCallback? onPress; // Add the onPress parameter
 
-  const FilledButtonWidget({super.key, required this.titleText});
+  const FilledButtonWidget({super.key, required this.titleText, this.onPress});
 
   @override
   State<FilledButtonWidget> createState() => _FilledButtonWidgetState();
@@ -24,12 +25,16 @@ class _FilledButtonWidgetState extends State<FilledButtonWidget> {
             borderRadius: BorderRadius.circular(4.0), // Border radius
           ),
         ),
-        onPressed: () {
-          Navigator.pushReplacement(
-              context,
-              MaterialPageRoute(
-                  builder: (context) => const ChecklistPartsParge()));
-        },
+        onPressed: widget.onPress ??
+            () {
+              // Default action if no onPress is provided
+              Navigator.pushReplacement(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => const ChecklistPartsParge(),
+                ),
+              );
+            },
         child: Text(
           widget.titleText,
           style: const TextStyle(
