@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:wilcon_phase2/module/checklist/checklist_item/widget/checklist_item_modal_widget.dart';
 
 class ChecklistItemClickableTextImgWidget extends StatefulWidget {
   final bool isInContainer;
@@ -19,11 +20,7 @@ class _ChecklistItemClickableTextImgWidgetState
       alignment: Alignment.centerLeft, // Force alignment to the left
       child: GestureDetector(
         onTap: () {
-          ScaffoldMessenger.of(context).showSnackBar(
-            const SnackBar(
-              content: Text('Text clicked!'),
-            ),
-          );
+          _showDropdownModal(context); // Call the method here
         },
         child: Text(
           'picture.jpg',
@@ -37,6 +34,17 @@ class _ChecklistItemClickableTextImgWidgetState
           ),
         ),
       ),
+    );
+  }
+
+  void _showDropdownModal(BuildContext context) {
+    showModalBottomSheet(
+      context: context,
+      isScrollControlled: true,
+      backgroundColor: Colors.transparent,
+      builder: (BuildContext context) {
+        return const ChecklistItemModalWidget();
+      },
     );
   }
 }
