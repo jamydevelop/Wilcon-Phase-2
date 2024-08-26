@@ -11,24 +11,27 @@ class NotificationBodyWidget extends StatefulWidget {
 class _NotificationBodyWidgetState extends State<NotificationBodyWidget> {
   @override
   Widget build(BuildContext context) {
-    return ListView.builder(
-      padding: const EdgeInsets.only(
-          left: 12.0, right: 12.0, bottom: 16.0), // Adjusted padding
-      itemCount: 15, // Number of cards to display
-      itemBuilder: (context, index) {
-        return Container(
-          margin: const EdgeInsets.only(bottom: 0.0), // Space between cards
-          decoration: const BoxDecoration(
-            border: Border(
-              bottom: BorderSide(
-                color: Colors.grey, // Bottom border color
-                width: 1.0, // Border width
+    return Container(
+      color: Colors.white,
+      child: ListView.builder(
+        padding: const EdgeInsets.only(
+            left: 12.0, right: 12.0, bottom: 16.0), // Adjusted padding
+        itemCount: 15, // Number of cards to display
+        itemBuilder: (context, index) {
+          return Container(
+            margin: const EdgeInsets.only(bottom: 0.0), // Space between cards
+            decoration: const BoxDecoration(
+              border: Border(
+                bottom: BorderSide(
+                  color: Colors.grey, // Bottom border color
+                  width: 1.0, // Border width
+                ),
               ),
             ),
-          ),
-          child: const NotificationCardWidget(),
-        );
-      },
+            child: const NotificationCardWidget(),
+          );
+        },
+      ),
     );
   }
 }
