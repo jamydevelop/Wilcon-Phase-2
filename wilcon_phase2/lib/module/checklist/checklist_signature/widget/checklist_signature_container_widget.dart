@@ -29,32 +29,33 @@ class _ChecklistSignatureContainerWidgetState
   @override
   Widget build(BuildContext context) {
     return Container(
-        color: Colors.transparent,
-        child: Column(
-          children: [
-            _signatureWidget(),
-            const SizedBox(height: 12),
-            FilledButtonWidget(
-              titleText: 'Submit',
-              onPress: () {
-                _showDropdownModal(context);
-              },
-            ),
-            const SizedBox(height: 12),
-            OutlinedButtonWidget(
-              titleText: 'Clear',
-              onPressed: () {
-                controller.clear(); // Clear the signature
-              },
-            ),
-          ],
-        ));
+      color: Colors.transparent,
+      child: Column(
+        children: [
+          Expanded(
+            child: _signatureWidget(),
+          ),
+          const SizedBox(height: 12),
+          FilledButtonWidget(
+            titleText: 'Submit',
+            onPress: () {
+              _showDropdownModal(context);
+            },
+          ),
+          const SizedBox(height: 12),
+          OutlinedButtonWidget(
+            titleText: 'Clear',
+            onPressed: () {
+              controller.clear(); // Clear the signature
+            },
+          ),
+        ],
+      ),
+    );
   }
 
   Widget _signatureWidget() {
     return Container(
-      height: MediaQuery.of(context).size.height *
-          0.526, // Set a specific height or use MediaQuery to calculate
       decoration: BoxDecoration(
         border: Border.all(
           color: const Color(0xFF166E16), // Border color
