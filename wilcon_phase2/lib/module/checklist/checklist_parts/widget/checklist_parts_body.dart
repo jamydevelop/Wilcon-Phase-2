@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:wilcon_phase2/module/checklist/checklist_item/presentation/checklist_item_page.dart';
+import 'package:wilcon_phase2/module/checklist/checklist_details/presentation/checklist_details_page.dart';
 import 'package:wilcon_phase2/module/checklist/checklist_parts/widget/checklist_parts_appbar_container_widget.dart';
 import 'package:wilcon_phase2/module/checklist/checklist_parts/widget/cheklist_part_button_widget.dart';
 
@@ -39,7 +39,8 @@ class _ChecklistPartsBodyState extends State<ChecklistPartsBody> {
                       Navigator.pushReplacement(
                           context,
                           MaterialPageRoute(
-                              builder: (context) => const ChecklistItemPage()));
+                              builder: (context) =>
+                                  const ChecklistDetailsPage()));
                     },
                   ),
                   CheklistPartButtonWidget(
@@ -48,7 +49,8 @@ class _ChecklistPartsBodyState extends State<ChecklistPartsBody> {
                       Navigator.pushReplacement(
                           context,
                           MaterialPageRoute(
-                              builder: (context) => const ChecklistItemPage()));
+                              builder: (context) =>
+                                  const ChecklistDetailsPage()));
                     },
                   ),
                   CheklistPartButtonWidget(
@@ -57,7 +59,8 @@ class _ChecklistPartsBodyState extends State<ChecklistPartsBody> {
                       Navigator.pushReplacement(
                           context,
                           MaterialPageRoute(
-                              builder: (context) => const ChecklistItemPage()));
+                              builder: (context) =>
+                                  const ChecklistDetailsPage()));
                     },
                   ),
                   CheklistPartButtonWidget(
@@ -66,7 +69,8 @@ class _ChecklistPartsBodyState extends State<ChecklistPartsBody> {
                       Navigator.pushReplacement(
                           context,
                           MaterialPageRoute(
-                              builder: (context) => const ChecklistItemPage()));
+                              builder: (context) =>
+                                  const ChecklistDetailsPage()));
                     },
                   ),
                   CheklistPartButtonWidget(
@@ -75,7 +79,8 @@ class _ChecklistPartsBodyState extends State<ChecklistPartsBody> {
                       Navigator.pushReplacement(
                           context,
                           MaterialPageRoute(
-                              builder: (context) => const ChecklistItemPage()));
+                              builder: (context) =>
+                                  const ChecklistDetailsPage()));
                     },
                   ),
                   CheklistPartButtonWidget(
@@ -84,7 +89,8 @@ class _ChecklistPartsBodyState extends State<ChecklistPartsBody> {
                       Navigator.pushReplacement(
                           context,
                           MaterialPageRoute(
-                              builder: (context) => const ChecklistItemPage()));
+                              builder: (context) =>
+                                  const ChecklistDetailsPage()));
                     },
                   ),
                   CheklistPartButtonWidget(
@@ -93,7 +99,8 @@ class _ChecklistPartsBodyState extends State<ChecklistPartsBody> {
                       Navigator.pushReplacement(
                           context,
                           MaterialPageRoute(
-                              builder: (context) => const ChecklistItemPage()));
+                              builder: (context) =>
+                                  const ChecklistDetailsPage()));
                     },
                   ),
                   CheklistPartButtonWidget(
@@ -102,7 +109,8 @@ class _ChecklistPartsBodyState extends State<ChecklistPartsBody> {
                       Navigator.pushReplacement(
                           context,
                           MaterialPageRoute(
-                              builder: (context) => const ChecklistItemPage()));
+                              builder: (context) =>
+                                  const ChecklistDetailsPage()));
                     },
                   ),
                   CheklistPartButtonWidget(
@@ -111,7 +119,8 @@ class _ChecklistPartsBodyState extends State<ChecklistPartsBody> {
                       Navigator.pushReplacement(
                           context,
                           MaterialPageRoute(
-                              builder: (context) => const ChecklistItemPage()));
+                              builder: (context) =>
+                                  const ChecklistDetailsPage()));
                     },
                   ),
                 ],

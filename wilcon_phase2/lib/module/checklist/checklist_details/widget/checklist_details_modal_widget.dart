@@ -1,14 +1,15 @@
 import 'package:flutter/material.dart';
 
-class ChecklistItemModalWidget extends StatefulWidget {
-  const ChecklistItemModalWidget({super.key});
+class ChecklistDetailsModalWidget extends StatefulWidget {
+  const ChecklistDetailsModalWidget({super.key});
 
   @override
-  State<ChecklistItemModalWidget> createState() =>
-      _ChecklistItemModalWidgetState();
+  State<ChecklistDetailsModalWidget> createState() =>
+      _ChecklistDetailsModalWidgetState();
 }
 
-class _ChecklistItemModalWidgetState extends State<ChecklistItemModalWidget> {
+class _ChecklistDetailsModalWidgetState
+    extends State<ChecklistDetailsModalWidget> {
   @override
   Widget build(BuildContext context) {
     return SafeArea(

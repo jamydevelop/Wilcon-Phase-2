@@ -1,19 +1,20 @@
 import 'package:flutter/material.dart';
-import 'package:wilcon_phase2/module/checklist/checklist_item/widget/checklist_item_appbar_container_widget.dart';
-import 'package:wilcon_phase2/module/checklist/checklist_item/widget/checklist_item_card_widget.dart';
-import 'package:wilcon_phase2/module/checklist/checklist_item/widget/checklist_item_image_text_container_widget.dart';
+import 'package:wilcon_phase2/module/checklist/checklist_details/widget/checklist_details_appbar_container_widget.dart';
+import 'package:wilcon_phase2/module/checklist/checklist_details/widget/checklist_details_card_widget.dart';
+import 'package:wilcon_phase2/module/checklist/checklist_details/widget/checklist_details_image_text_container_widget.dart';
 import 'package:wilcon_phase2/module/checklist/checklist_not_compiled/presentation/checklist_not_compiled_page.dart';
 import 'package:wilcon_phase2/module/checklist/checklist_summary/widget/card_widget/header_widget.dart';
 
-class ChecklistItemBodyWidget extends StatefulWidget {
-  const ChecklistItemBodyWidget({super.key});
+class ChecklistDetailsBodyWidget extends StatefulWidget {
+  const ChecklistDetailsBodyWidget({super.key});
 
   @override
-  State<ChecklistItemBodyWidget> createState() =>
-      _ChecklistItemBodyWidgetState();
+  State<ChecklistDetailsBodyWidget> createState() =>
+      _ChecklistDetailsBodyWidgetState();
 }
 
-class _ChecklistItemBodyWidgetState extends State<ChecklistItemBodyWidget> {
+class _ChecklistDetailsBodyWidgetState
+    extends State<ChecklistDetailsBodyWidget> {
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -22,7 +23,7 @@ class _ChecklistItemBodyWidgetState extends State<ChecklistItemBodyWidget> {
         const Material(
           elevation: 4.0, // Adjust elevation for the floating effect
           shadowColor: Colors.black45, // Optional: To control shadow color
-          child: ChecklistItemAppbarContainerWidget(),
+          child: ChecklistDetailsAppbarContainerWidget(),
         ),
         const SizedBox(height: 12),
         Expanded(
@@ -36,7 +37,7 @@ class _ChecklistItemBodyWidgetState extends State<ChecklistItemBodyWidget> {
               width: double.infinity,
               child: Column(
                 children: <Widget>[
-                  ChecklistItemCardWidget(
+                  ChecklistDetailsCardWidget(
                     description:
                         "Complete installed perimeter fence and perimeter lights.",
                     isCompiled: false,
@@ -48,7 +49,7 @@ class _ChecklistItemBodyWidgetState extends State<ChecklistItemBodyWidget> {
                                   const ChecklistNotCompiledPage()));
                     },
                   ),
-                  ChecklistItemCardWidget(
+                  ChecklistDetailsCardWidget(
                     description:
                         "No bunk house/barracks on-site (Except for the warehouse of contractor’s tools and equipment)",
                     isCompiled: true,
@@ -60,7 +61,7 @@ class _ChecklistItemBodyWidgetState extends State<ChecklistItemBodyWidget> {
                                   const ChecklistNotCompiledPage()));
                     },
                   ),
-                  ChecklistItemCardWidget(
+                  ChecklistDetailsCardWidget(
                     description:
                         "With a separate entrance and exits for workers and delivery trucks",
                     isCompiled: false,
@@ -72,7 +73,7 @@ class _ChecklistItemBodyWidgetState extends State<ChecklistItemBodyWidget> {
                                   const ChecklistNotCompiledPage()));
                     },
                   ),
-                  ChecklistItemCardWidget(
+                  ChecklistDetailsCardWidget(
                     description:
                         "With a temporary warehouse for Wilcon Engineering materials",
                     isCompiled: true,
@@ -84,7 +85,7 @@ class _ChecklistItemBodyWidgetState extends State<ChecklistItemBodyWidget> {
                                   const ChecklistNotCompiledPage()));
                     },
                   ),
-                  ChecklistItemCardWidget(
+                  ChecklistDetailsCardWidget(
                     description:
                         "Certified safety officer on duty (COSH) - provide a copy of the Certificate to Wilcon Project Engineer and Corporate Security Setter",
                     isCompiled: true,
@@ -96,7 +97,7 @@ class _ChecklistItemBodyWidgetState extends State<ChecklistItemBodyWidget> {
                                   const ChecklistNotCompiledPage()));
                     },
                   ),
-                  ChecklistItemCardWidget(
+                  ChecklistDetailsCardWidget(
                     description:
                         "Safety and security signages are in place in noticeable areas",
                     isCompiled: true,
@@ -112,7 +113,7 @@ class _ChecklistItemBodyWidgetState extends State<ChecklistItemBodyWidget> {
                   const SizedBox(height: 12),
                   const HeaderWidget(title: 'Images'),
                   const SizedBox(height: 12),
-                  const ChecklistItemImageTextContainerWidget(),
+                  const ChecklistDetailsImageTextContainerWidget(),
                 ],
               ),
             ),

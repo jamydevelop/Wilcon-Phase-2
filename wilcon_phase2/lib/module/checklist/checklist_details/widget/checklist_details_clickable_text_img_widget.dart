@@ -1,19 +1,19 @@
 import 'package:flutter/material.dart';
-import 'package:wilcon_phase2/module/checklist/checklist_item/widget/checklist_item_modal_widget.dart';
+import 'package:wilcon_phase2/module/checklist/checklist_details/widget/checklist_details_modal_widget.dart';
 
-class ChecklistItemClickableTextImgWidget extends StatefulWidget {
+class ChecklistDetailsClickableTextImgWidget extends StatefulWidget {
   final bool isInContainer;
 
-  const ChecklistItemClickableTextImgWidget(
+  const ChecklistDetailsClickableTextImgWidget(
       {super.key, this.isInContainer = true});
 
   @override
-  State<ChecklistItemClickableTextImgWidget> createState() =>
-      _ChecklistItemClickableTextImgWidgetState();
+  State<ChecklistDetailsClickableTextImgWidget> createState() =>
+      _ChecklistDetailsClickableTextImgWidgetState();
 }
 
-class _ChecklistItemClickableTextImgWidgetState
-    extends State<ChecklistItemClickableTextImgWidget> {
+class _ChecklistDetailsClickableTextImgWidgetState
+    extends State<ChecklistDetailsClickableTextImgWidget> {
   @override
   Widget build(BuildContext context) {
     return SafeArea(
@@ -45,7 +45,7 @@ class _ChecklistItemClickableTextImgWidgetState
       isScrollControlled: true,
       backgroundColor: Colors.transparent,
       builder: (BuildContext context) {
-        return const ChecklistItemModalWidget();
+        return const ChecklistDetailsModalWidget();
       },
     );
   }

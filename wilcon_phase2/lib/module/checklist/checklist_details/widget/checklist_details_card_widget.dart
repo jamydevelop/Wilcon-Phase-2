@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 
-class ChecklistItemCardWidget extends StatefulWidget {
+class ChecklistDetailsCardWidget extends StatefulWidget {
   final String description; // Parameter for the description text
   final bool isCompiled; // Parameter to set default checkbox state
   final VoidCallback? onTap; // New parameter for onTap callback
 
-  const ChecklistItemCardWidget({
+  const ChecklistDetailsCardWidget({
     super.key,
     required this.description,
     required this.isCompiled,
@@ -13,11 +13,12 @@ class ChecklistItemCardWidget extends StatefulWidget {
   });
 
   @override
-  State<ChecklistItemCardWidget> createState() =>
-      _ChecklistItemCardWidgetState();
+  State<ChecklistDetailsCardWidget> createState() =>
+      _ChecklistDetailsCardWidgetState();
 }
 
-class _ChecklistItemCardWidgetState extends State<ChecklistItemCardWidget> {
+class _ChecklistDetailsCardWidgetState
+    extends State<ChecklistDetailsCardWidget> {
   late bool isComplied;
   late bool isNotComplied;
 

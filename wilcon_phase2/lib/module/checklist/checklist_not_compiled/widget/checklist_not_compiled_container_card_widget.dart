@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:wilcon_phase2/module/checklist/checklist_item/widget/checklist_item_clickable_text_img_widget.dart';
+import 'package:wilcon_phase2/module/checklist/checklist_details/widget/checklist_details_clickable_text_img_widget.dart';
 import 'package:wilcon_phase2/widget/build_row_widget.dart';
 
 class ChecklistNotCompiledContainerCardWidget extends StatefulWidget {
@@ -30,13 +30,13 @@ class _ChecklistNotCompiledContainerCardWidgetState
         ),
         BuildRowWidget(
           label: 'Image',
-          customWidget: const ChecklistItemClickableTextImgWidget(),
+          customWidget: const ChecklistDetailsClickableTextImgWidget(),
           backgroundColor: Colors.grey[200]!,
           isTopBorderActivate: true,
         ),
         const BuildRowWidget(
           label: '',
-          customWidget: ChecklistItemClickableTextImgWidget(),
+          customWidget: ChecklistDetailsClickableTextImgWidget(),
           backgroundColor: Colors.white,
           isTopBorderActivate: false,
         ),

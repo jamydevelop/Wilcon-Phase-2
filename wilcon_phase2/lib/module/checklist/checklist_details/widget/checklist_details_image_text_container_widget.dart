@@ -1,16 +1,16 @@
 import 'package:flutter/material.dart';
-import 'package:wilcon_phase2/module/checklist/checklist_item/widget/checklist_item_clickable_text_img_widget.dart';
+import 'package:wilcon_phase2/module/checklist/checklist_details/widget/checklist_details_clickable_text_img_widget.dart';
 
-class ChecklistItemImageTextContainerWidget extends StatefulWidget {
-  const ChecklistItemImageTextContainerWidget({super.key});
+class ChecklistDetailsImageTextContainerWidget extends StatefulWidget {
+  const ChecklistDetailsImageTextContainerWidget({super.key});
 
   @override
-  State<ChecklistItemImageTextContainerWidget> createState() =>
-      _ChecklistItemImageTextContainerWidgetState();
+  State<ChecklistDetailsImageTextContainerWidget> createState() =>
+      _ChecklistDetailsImageTextContainerWidgetState();
 }
 
-class _ChecklistItemImageTextContainerWidgetState
-    extends State<ChecklistItemImageTextContainerWidget> {
+class _ChecklistDetailsImageTextContainerWidgetState
+    extends State<ChecklistDetailsImageTextContainerWidget> {
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -33,7 +33,7 @@ class _ChecklistItemImageTextContainerWidgetState
                       style: TextStyle(fontSize: 16),
                     ),
                     SizedBox(width: 8.0),
-                    ChecklistItemClickableTextImgWidget(isInContainer: true),
+                    ChecklistDetailsClickableTextImgWidget(isInContainer: true),
                   ],
                 ),
               ),
@@ -62,7 +62,7 @@ class _ChecklistItemImageTextContainerWidgetState
                       style: TextStyle(fontSize: 16),
                     ),
                     SizedBox(width: 8.0),
-                    ChecklistItemClickableTextImgWidget(isInContainer: true),
+                    ChecklistDetailsClickableTextImgWidget(isInContainer: true),
                   ],
                 ),
               ),
