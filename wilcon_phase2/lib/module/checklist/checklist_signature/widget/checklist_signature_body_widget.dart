@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:wilcon_phase2/module/checklist/checklist_signature/widget/checklist_signature_appbar_container_widget.dart';
+import 'package:wilcon_phase2/module/checklist/checklist_signature/widget/checklist_signature_container_widget.dart';
+import 'package:wilcon_phase2/widget/buttons_widget/filled_button_widget.dart';
+import 'package:wilcon_phase2/widget/buttons_widget/outlined_button_widget.dart';
 
 class ChecklistSignatureBodyWidget extends StatefulWidget {
   const ChecklistSignatureBodyWidget({super.key});
@@ -23,17 +26,22 @@ class _ChecklistSignatureBodyWidgetState
         ),
         const SizedBox(height: 12),
         Expanded(
-          child: SingleChildScrollView(
-            child: Container(
-              margin: const EdgeInsets.only(
-                bottom: 12,
-                left: 12,
-                right: 12,
-              ),
-              width: double.infinity,
-              child: const Column(
-                children: <Widget>[],
-              ),
+          child: Container(
+            margin: const EdgeInsets.only(
+              bottom: 12,
+              left: 12,
+              right: 12,
+            ),
+            child: Column(
+              children: <Widget>[
+                const Expanded(
+                  child: ChecklistSignatureContainerWidget(),
+                ),
+                const SizedBox(height: 12),
+                FilledButtonWidget(titleText: 'Submit'),
+                const SizedBox(height: 12),
+                OutlinedButtonWidget(titleText: 'Clear'),
+              ],
             ),
           ),
         ),
