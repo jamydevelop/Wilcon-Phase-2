@@ -41,9 +41,11 @@ class _ChecklistSignatureContainerWidgetState
               },
             ),
             const SizedBox(height: 12),
-            const OutlinedButtonWidget(
+            OutlinedButtonWidget(
               titleText: 'Clear',
-              // onPressed: () {},
+              onPressed: () {
+                controller.clear(); // Clear the signature
+              },
             ),
           ],
         ));
