@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:wilcon_phase2/module/checklist/checklist_parts/presentation/checklist_parts_parge.dart';
 
 class FilledButtonWidget extends StatefulWidget {
   final String titleText;
@@ -28,12 +27,12 @@ class _FilledButtonWidgetState extends State<FilledButtonWidget> {
         onPressed: widget.onPress ??
             () {
               // Default action if no onPress is provided
-              Navigator.pushReplacement(
-                context,
-                MaterialPageRoute(
-                  builder: (context) => const ChecklistPartsParge(),
-                ),
-              );
+              // Navigator.pushReplacement(
+              //   context,
+              //   MaterialPageRoute(
+              //     builder: (context) => const ChecklistPartsParge(),
+              //   ),
+              // );
             },
         child: Text(
           widget.titleText,
