@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:wilcon_phase2/module/checklist/checklist_parts/presentation/checklist_parts_parge.dart';
 import 'package:wilcon_phase2/module/checklist/checklist_signature/presentation/checklist_signature_page.dart';
 import 'package:wilcon_phase2/widget/buttons_widget/filled_button_widget.dart';
 import 'package:wilcon_phase2/widget/buttons_widget/only_text_button_widget.dart';
@@ -19,7 +20,16 @@ class _ButtonContainerState extends State<ButtonContainer> {
       child: Column(
         children: [
           const SizedBox(height: 12),
-          const FilledButtonWidget(titleText: 'View Checklist'),
+          FilledButtonWidget(
+            titleText: 'View Checklist',
+            onPress: () {
+              Navigator.pushReplacement(
+                context,
+                MaterialPageRoute(
+                    builder: (context) => const ChecklistPartsParge()),
+              );
+            },
+          ),
           const SizedBox(height: 12),
           FilledButtonWidget(
             titleText: 'Confirm',

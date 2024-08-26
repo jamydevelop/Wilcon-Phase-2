@@ -17,6 +17,7 @@ class _FilledButtonWidgetState extends State<FilledButtonWidget> {
       width: double.infinity,
       height: 50,
       child: ElevatedButton(
+        onPressed: widget.onPress, // Use the onPress parameter
         style: ElevatedButton.styleFrom(
           padding: const EdgeInsets.all(16.0),
           backgroundColor: const Color(0xFF166E16), // Background color
@@ -24,16 +25,6 @@ class _FilledButtonWidgetState extends State<FilledButtonWidget> {
             borderRadius: BorderRadius.circular(4.0), // Border radius
           ),
         ),
-        onPressed: widget.onPress ??
-            () {
-              // Default action if no onPress is provided
-              // Navigator.pushReplacement(
-              //   context,
-              //   MaterialPageRoute(
-              //     builder: (context) => const ChecklistPartsParge(),
-              //   ),
-              // );
-            },
         child: Text(
           widget.titleText,
           style: const TextStyle(
