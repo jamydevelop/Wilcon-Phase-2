@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:wilcon_phase2/module/checklist/checklist_details/presentation/checklist_details_page.dart';
 import 'package:wilcon_phase2/module/checklist/checklist_parts/widget/checklist_parts_appbar_container_widget.dart';
+import 'package:wilcon_phase2/module/checklist/checklist_parts/widget/checklist_parts_button_container_widget.dart';
 import 'package:wilcon_phase2/module/checklist/checklist_parts/widget/cheklist_part_button_widget.dart';
 
 class ChecklistPartsBody extends StatefulWidget {
@@ -123,6 +124,7 @@ class _ChecklistPartsBodyState extends State<ChecklistPartsBody> {
                                   const ChecklistDetailsPage()));
                     },
                   ),
+                  const ChecklistPartsButtonContainerWidget()
                 ],
               ),
             ),
@@ -131,4 +133,16 @@ class _ChecklistPartsBodyState extends State<ChecklistPartsBody> {
       ],
     );
   }
+
+  //   void _showDialog(BuildContext context) {
+  //   showDialog(
+  //     context: context,
+  //     builder: (BuildContext context) {
+  //       return const Dialog(
+  //         backgroundColor: Colors.transparent,
+  //         child: ReturnToSecurityDialogWidget(),
+  //       );
+  //     },
+  //   );
+  // }
 }
