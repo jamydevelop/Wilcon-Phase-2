@@ -82,13 +82,16 @@ class _WarehouseDialogWidgetState extends State<WarehouseDialogWidget> {
               FilledButtonWidget(
                 titleText: 'Select',
                 onPress: () {
+                  Navigator.pop(context);
                   //handle logic here
                 },
               ),
               const SizedBox(height: 16.0),
               OutlinedButtonWidget(
                 titleText: "Back",
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.pop(context);
+                },
               ),
             ],
           ),
