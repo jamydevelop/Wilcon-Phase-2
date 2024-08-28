@@ -3,12 +3,14 @@ import 'package:wilcon_phase2/widget/buttons_widget/filled_button_widget.dart';
 import 'package:wilcon_phase2/widget/buttons_widget/modal_close_button_widget.dart';
 
 class SuccessDialogWidget extends StatefulWidget {
+  final String title;
   final String confirmationMessage;
 
   const SuccessDialogWidget({
     super.key,
+    this.title = 'Thank You!', // Default value for title
     this.confirmationMessage =
-        'This checklist has been confirmed.', // Default value
+        'This checklist has been confirmed.', // Default value for confirmation message
   });
 
   @override
@@ -49,9 +51,9 @@ class _SuccessDialogWidgetState extends State<SuccessDialogWidget> {
             size: 48,
           ),
           const SizedBox(height: 16),
-          const Text(
-            'Thank You!',
-            style: TextStyle(
+          Text(
+            widget.title, // Use the title parameter here
+            style: const TextStyle(
               fontSize: 24,
               fontWeight: FontWeight.bold,
               color: Color(0xFF313131), // Text color

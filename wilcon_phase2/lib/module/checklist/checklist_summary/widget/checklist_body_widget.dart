@@ -8,6 +8,7 @@ import 'package:wilcon_phase2/module/checklist/checklist_summary/widget/card_wid
 import 'package:wilcon_phase2/module/checklist/checklist_summary/widget/card_widget/third_card_body_widget.dart';
 import 'package:wilcon_phase2/module/checklist/checklist_summary/widget/checklist_appbar_container_widget.dart';
 import 'package:wilcon_phase2/module/checklist/checklist_summary/widget/text_label_widget.dart';
+import 'package:wilcon_phase2/widget/show_dialog/success_dialog_widget.dart';
 
 class ChecklistBodyWidget extends StatefulWidget {
   const ChecklistBodyWidget({super.key});
@@ -34,22 +35,26 @@ class _ChecklistBodyWidgetState extends State<ChecklistBodyWidget> {
               margin: const EdgeInsets.all(12),
               width: double.infinity,
               color: Colors.white, //*********** COLOR TEAL ***************
-              child: const Column(
+              child: Column(
                 children: <Widget>[
-                  TextLabelWidget(),
-                  FirstCardBodyWidget(),
-                  Divider(thickness: 1, color: Colors.grey),
-                  SecondCardBodyWidget(),
-                  SizedBox(height: 12),
-                  HeaderWidget(title: 'Comments'),
-                  SizedBox(height: 12),
-                  ThirdCardBodyWidget(),
-                  Divider(thickness: 1, color: Colors.grey),
-                  AddCommentTextfieldWidget(),
-                  SizedBox(height: 12),
-                  HeaderWidget(title: 'History'),
-                  SizedBox(height: 12),
-                  HistoryUpdateCardWidget(),
+                  const TextLabelWidget(),
+                  const FirstCardBodyWidget(),
+                  const Divider(thickness: 1, color: Colors.grey),
+                  SecondCardBodyWidget(
+                    onPress: () {
+                      _showDialog(context);
+                    },
+                  ),
+                  const SizedBox(height: 12),
+                  const HeaderWidget(title: 'Comments'),
+                  const SizedBox(height: 12),
+                  const ThirdCardBodyWidget(),
+                  const Divider(thickness: 1, color: Colors.grey),
+                  const AddCommentTextfieldWidget(),
+                  const SizedBox(height: 12),
+                  const HeaderWidget(title: 'History'),
+                  const SizedBox(height: 12),
+                  const HistoryUpdateCardWidget(),
                 ],
               ),
             ),
@@ -57,6 +62,22 @@ class _ChecklistBodyWidgetState extends State<ChecklistBodyWidget> {
         ),
         const ChecklistSummaryButtonContainerWidget(),
       ],
+    );
+  }
+
+  void _showDialog(BuildContext context) {
+    showDialog(
+      context: context,
+      builder: (BuildContext context) {
+        return const Dialog(
+          backgroundColor: Colors.transparent,
+          child: SuccessDialogWidget(
+            title: "Great!",
+            confirmationMessage:
+                'You have successfully submitted new sanitary schedule. Your checklist ticket number is #1213454655.',
+          ),
+        );
+      },
     );
   }
 }
