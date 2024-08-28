@@ -62,7 +62,7 @@ class _ChecklistSummaryButtonContainerWidgetState
     showDialog(
       context: context,
       builder: (BuildContext context) {
-        return Dialog(
+        return const Dialog(
           backgroundColor: Colors.transparent,
           child: ReturnToSecurityDialogWidget(),
         );
