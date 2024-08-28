@@ -2,20 +2,20 @@ import 'package:flutter/material.dart';
 import 'package:wilcon_phase2/widget/buttons_widget/filled_button_widget.dart';
 import 'package:wilcon_phase2/widget/buttons_widget/modal_close_button_widget.dart';
 
-class ThankYouDialogWidget extends StatefulWidget {
+class SuccessDialogWidget extends StatefulWidget {
   final String confirmationMessage;
 
-  const ThankYouDialogWidget({
+  const SuccessDialogWidget({
     super.key,
     this.confirmationMessage =
         'This checklist has been confirmed.', // Default value
   });
 
   @override
-  State<ThankYouDialogWidget> createState() => _ThankYouDialogWidgetState();
+  State<SuccessDialogWidget> createState() => _SuccessDialogWidgetState();
 }
 
-class _ThankYouDialogWidgetState extends State<ThankYouDialogWidget> {
+class _SuccessDialogWidgetState extends State<SuccessDialogWidget> {
   @override
   Widget build(BuildContext context) {
     return Container(

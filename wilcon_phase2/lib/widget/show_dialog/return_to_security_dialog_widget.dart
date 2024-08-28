@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:wilcon_phase2/widget/buttons_widget/filled_button_widget.dart';
 import 'package:wilcon_phase2/widget/buttons_widget/modal_close_button_widget.dart';
 import 'package:wilcon_phase2/widget/buttons_widget/outlined_button_widget.dart';
-import 'package:wilcon_phase2/widget/show_dialog/thank_you_dialog_widget.dart';
+import 'package:wilcon_phase2/widget/show_dialog/success_dialog_widget.dart';
 
 class ReturnToSecurityDialogWidget extends StatefulWidget {
   const ReturnToSecurityDialogWidget({super.key});
@@ -138,7 +138,7 @@ class _ReturnToSecurityDialogWidgetState
       builder: (BuildContext context) {
         return const Dialog(
           backgroundColor: Colors.transparent,
-          child: ThankYouDialogWidget(
+          child: SuccessDialogWidget(
               confirmationMessage:
                   "This checklist has been returned to security officer."),
         );
