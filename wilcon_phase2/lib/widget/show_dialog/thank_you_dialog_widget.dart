@@ -2,25 +2,22 @@ import 'package:flutter/material.dart';
 import 'package:wilcon_phase2/widget/buttons_widget/filled_button_widget.dart';
 import 'package:wilcon_phase2/widget/buttons_widget/modal_close_button_widget.dart';
 
-class ThankYouModalWidget extends StatefulWidget {
-  const ThankYouModalWidget({super.key});
+class ThankYouDialogWidget extends StatefulWidget {
+  const ThankYouDialogWidget({super.key});
 
   @override
-  State<ThankYouModalWidget> createState() => _ThankYouModalWidgetState();
+  State<ThankYouDialogWidget> createState() => _ThankYouDialogWidgetState();
 }
 
-class _ThankYouModalWidgetState extends State<ThankYouModalWidget> {
+class _ThankYouDialogWidgetState extends State<ThankYouDialogWidget> {
   @override
   Widget build(BuildContext context) {
     return Container(
       width: double.infinity, // Takes up all available width
       padding: const EdgeInsets.all(24),
       decoration: const BoxDecoration(
-        color: Colors.white,
-        borderRadius: BorderRadius.vertical(
-          top: Radius.circular(16),
-        ),
-      ),
+          color: Colors.white,
+          borderRadius: BorderRadius.all(Radius.circular(5))),
       child: Column(
         mainAxisSize: MainAxisSize.min,
         crossAxisAlignment: CrossAxisAlignment.center,
@@ -56,7 +53,7 @@ class _ThankYouModalWidgetState extends State<ThankYouModalWidget> {
           ),
           const SizedBox(height: 8),
           const Text(
-            'Your submission has been received.',
+            'This checklist has been confirmed.',
             style: TextStyle(
               fontSize: 16,
               color: Color(0xFF313131), // Text color

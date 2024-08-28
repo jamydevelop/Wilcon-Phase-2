@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:wilcon_phase2/module/checklist/checklist_summary/widget/button_container.dart';
+import 'package:wilcon_phase2/module/checklist/checklist_summary/widget/checklist_summary_button_container_widget.dart';
 import 'package:wilcon_phase2/module/checklist/checklist_summary/widget/card_widget/add_comment_textfield_widget.dart';
 import 'package:wilcon_phase2/module/checklist/checklist_summary/widget/card_widget/first_card_body_widget.dart';
 import 'package:wilcon_phase2/module/checklist/checklist_summary/widget/card_widget/header_widget.dart';
@@ -55,7 +55,7 @@ class _ChecklistBodyWidgetState extends State<ChecklistBodyWidget> {
             ),
           ),
         ),
-        const ButtonContainer(),
+        const ChecklistSummaryButtonContainerWidget(),
       ],
     );
   }

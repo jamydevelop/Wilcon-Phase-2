@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:signature/signature.dart';
 import 'package:wilcon_phase2/widget/buttons_widget/filled_button_widget.dart';
 import 'package:wilcon_phase2/widget/buttons_widget/outlined_button_widget.dart';
-import 'package:wilcon_phase2/widget/project_modal/thank_you_modal_widget.dart';
+import 'package:wilcon_phase2/widget/show_dialog/thank_you_dialog_widget.dart';
 
 class ChecklistSignatureContainerWidget extends StatefulWidget {
   const ChecklistSignatureContainerWidget({super.key});
@@ -39,7 +39,7 @@ class _ChecklistSignatureContainerWidgetState
           FilledButtonWidget(
             titleText: 'Submit',
             onPress: () {
-              _showDropdownModal(context);
+              _showDialog(context);
             },
           ),
           const SizedBox(height: 12),
@@ -71,13 +71,14 @@ class _ChecklistSignatureContainerWidgetState
     );
   }
 
-  void _showDropdownModal(BuildContext context) {
-    showModalBottomSheet(
+  void _showDialog(BuildContext context) {
+    showDialog(
       context: context,
-      isScrollControlled: true,
-      backgroundColor: Colors.transparent,
       builder: (BuildContext context) {
-        return const ThankYouModalWidget();
+        return const Dialog(
+          backgroundColor: Colors.transparent,
+          child: ThankYouDialogWidget(),
+        );
       },
     );
   }
