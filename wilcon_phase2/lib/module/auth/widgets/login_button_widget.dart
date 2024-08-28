@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:wilcon_phase2/module/homepage/presentation/home_page.dart';
+import 'package:wilcon_phase2/module/project_list/presentation/project_list_page.dart';
 
 class LoginButtonWidget extends StatefulWidget {
   const LoginButtonWidget({super.key});
@@ -30,7 +30,8 @@ class _LoginButtonWidgetState extends State<LoginButtonWidget> {
         onPressed: () {
           Navigator.pushReplacement(
             context,
-            MaterialPageRoute(builder: (context) => const Homepage()),
+            //MaterialPageRoute(builder: (context) => const Homepage()),
+            MaterialPageRoute(builder: (context) => const ProjectListPage()),
           );
         },
         child: const Text('Login'),

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:wilcon_phase2/module/auth/presentation/login/login_page.dart';
+import 'package:wilcon_phase2/module/auth/presentation/login_page.dart';
 
 void main() {
   runApp(const MyApp());
