@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:wilcon_phase2/module/project_list/widget/project_list_appbar_container_widget.dart';
+import 'package:wilcon_phase2/module/project_list/widget/project_list_content_body_container_widget.dart';
 
 class ProjectListBodyWidget extends StatefulWidget {
   const ProjectListBodyWidget({super.key});
@@ -23,14 +24,12 @@ class _ProjectListBodyWidgetState extends State<ProjectListBodyWidget> {
         Expanded(
           child: SingleChildScrollView(
             child: Container(
-              margin: const EdgeInsets.only(
-                bottom: 12,
-                left: 12,
-                right: 12,
-              ),
+              color: Colors.white,
               width: double.infinity,
               child: const Column(
-                children: <Widget>[],
+                children: <Widget>[
+                  ProjectListContentBodyContainerWidget(),
+                ],
               ),
             ),
           ),

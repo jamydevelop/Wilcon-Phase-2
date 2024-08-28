@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:wilcon_phase2/widget/customized_appbar/appbar_widget.dart';
 import 'package:wilcon_phase2/widget/customized_appbar/back_screen_widget.dart';
 import 'package:wilcon_phase2/widget/header_bar_widget.dart';
+import 'package:wilcon_phase2/widget/show_dialog/filter_dialog_widget.dart';
 
 class ProjectListAppbarContainerWidget extends StatefulWidget {
   const ProjectListAppbarContainerWidget({super.key});
@@ -30,12 +31,8 @@ class _ProjectListAppbarContainerWidgetState
               isYellow: false,
             ),
             const SizedBox(height: 12),
-            filterButton(),
+            filterButton(context), // Pass context here
             const SizedBox(height: 12),
-            // const Align(
-            //   alignment: Alignment.centerLeft,
-            //   child: Text('Input simple instruction here. Make it short.'),
-            // ),
             const SizedBox(height: 24),
           ],
         ),
@@ -43,7 +40,8 @@ class _ProjectListAppbarContainerWidgetState
     );
   }
 
-  Widget filterButton() {
+  Widget filterButton(BuildContext context) {
+    // Accept context as a parameter
     return ElevatedButton(
       style: ElevatedButton.styleFrom(
         backgroundColor:
@@ -55,7 +53,12 @@ class _ProjectListAppbarContainerWidgetState
             vertical: 12.0), // Vertical padding inside the button
       ),
       onPressed: () {
-        // Define the onPress action here
+        showDialog(
+          context: context,
+          builder: (BuildContext context) {
+            return const FilterDialogWidget();
+          },
+        );
       },
       child: const Row(
         mainAxisAlignment: MainAxisAlignment.center, // Center the icon and text

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:wilcon_phase2/module/auth/presentation/login_page.dart';
 import 'package:wilcon_phase2/module/homepage/presentation/home_page.dart';
+import 'package:wilcon_phase2/module/project_list/presentation/project_list_page.dart';
 
 class CustomSidebar extends StatelessWidget {
   const CustomSidebar({super.key});
@@ -79,8 +80,7 @@ class CustomSidebar extends StatelessWidget {
                     () => Navigator.pushReplacement(
                       context,
                       MaterialPageRoute(
-                          // ignore: null_check_always_fails
-                          builder: (context) => null!),
+                          builder: (context) => const ProjectListPage()),
                     ),
                   ),
                   const Padding(

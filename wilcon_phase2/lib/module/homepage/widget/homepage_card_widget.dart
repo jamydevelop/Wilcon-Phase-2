@@ -31,7 +31,8 @@ class _HomepageCardWidgetState extends State<HomepageCardWidget> {
 
   BoxDecoration _getTextDecoration(int index) {
     if (index == 2) {
-      if (widget.rowContents[index] == "Acknowledge") {
+      if (widget.rowContents[index] == "Acknowledge" ||
+          widget.rowContents[index] == "Active") {
         return BoxDecoration(
           color: const Color(0xFFD4F4EC),
           borderRadius: BorderRadius.circular(30), // 30px border radius
@@ -46,6 +47,11 @@ class _HomepageCardWidgetState extends State<HomepageCardWidget> {
           color: const Color(0xFFFDDDD3),
           borderRadius: BorderRadius.circular(30), // 30px border radius
         );
+      } else if (widget.rowContents[index] == "Inactive") {
+        return BoxDecoration(
+          color: const Color(0xFFFDDDD3),
+          borderRadius: BorderRadius.circular(30), // 30px border radius
+        );
       }
     }
     return const BoxDecoration(); // Default (no background change)
@@ -53,11 +59,13 @@ class _HomepageCardWidgetState extends State<HomepageCardWidget> {
 
   TextStyle _getTextStyle(int index) {
     if (index == 2) {
-      if (widget.rowContents[index] == "Acknowledge") {
+      if (widget.rowContents[index] == "Acknowledge" ||
+          widget.rowContents[index] == "Active") {
         return const TextStyle(color: Color(0xFF10513F));
       } else if (widget.rowContents[index] == "For checking of inspector") {
         return const TextStyle(color: Color(0xFF663000));
-      } else if (widget.rowContents[index] == "Not Validated") {
+      } else if (widget.rowContents[index] == "Not Validated" ||
+          widget.rowContents[index] == "Inactive") {
         return const TextStyle(color: Color(0xFF61220F));
       }
     }
@@ -71,6 +79,7 @@ class _HomepageCardWidgetState extends State<HomepageCardWidget> {
       shape: RoundedRectangleBorder(
         borderRadius: BorderRadius.circular(8),
       ),
+      margin: EdgeInsets.zero, // Explicitly set margin to zero
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
