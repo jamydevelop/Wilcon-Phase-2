@@ -8,6 +8,7 @@ import 'package:wilcon_phase2/module/checklist/checklist_summary/widget/card_wid
 import 'package:wilcon_phase2/module/checklist/checklist_summary/widget/card_widget/third_card_body_widget.dart';
 import 'package:wilcon_phase2/module/checklist/checklist_summary/widget/checklist_appbar_container_widget.dart';
 import 'package:wilcon_phase2/module/checklist/checklist_summary/widget/text_label_widget.dart';
+import 'package:wilcon_phase2/widget/show_dialog/error_dialog_widget.dart';
 import 'package:wilcon_phase2/widget/show_dialog/success_dialog_widget.dart';
 
 class ChecklistBodyWidget extends StatefulWidget {
@@ -38,11 +39,15 @@ class _ChecklistBodyWidgetState extends State<ChecklistBodyWidget> {
               child: Column(
                 children: <Widget>[
                   const TextLabelWidget(),
-                  const FirstCardBodyWidget(),
+                  FirstCardBodyWidget(
+                    onPress: () {
+                      _showErrorDialog(context);
+                    },
+                  ),
                   const Divider(thickness: 1, color: Colors.grey),
                   SecondCardBodyWidget(
                     onPress: () {
-                      _showDialog(context);
+                      _showSuccessDialog(context);
                     },
                   ),
                   const SizedBox(height: 12),
@@ -65,7 +70,7 @@ class _ChecklistBodyWidgetState extends State<ChecklistBodyWidget> {
     );
   }
 
-  void _showDialog(BuildContext context) {
+  void _showSuccessDialog(BuildContext context) {
     showDialog(
       context: context,
       builder: (BuildContext context) {
@@ -75,6 +80,22 @@ class _ChecklistBodyWidgetState extends State<ChecklistBodyWidget> {
             title: "Great!",
             confirmationMessage:
                 'You have successfully submitted new sanitary schedule. Your checklist ticket number is #1213454655.',
+          ),
+        );
+      },
+    );
+  }
+
+  void _showErrorDialog(BuildContext context) {
+    showDialog(
+      context: context,
+      builder: (BuildContext context) {
+        return const Dialog(
+          backgroundColor: Colors.transparent,
+          child: ErrorDialogWidget(
+            title: "Sorry!",
+            confirmationMessage:
+                'You have entered sanitary schedule that already exists in the system. Please input new schedule.',
           ),
         );
       },
