@@ -3,7 +3,13 @@ import 'package:wilcon_phase2/widget/buttons_widget/filled_button_widget.dart';
 import 'package:wilcon_phase2/widget/buttons_widget/modal_close_button_widget.dart';
 
 class ThankYouDialogWidget extends StatefulWidget {
-  const ThankYouDialogWidget({super.key});
+  final String confirmationMessage;
+
+  const ThankYouDialogWidget({
+    super.key,
+    this.confirmationMessage =
+        'This checklist has been confirmed.', // Default value
+  });
 
   @override
   State<ThankYouDialogWidget> createState() => _ThankYouDialogWidgetState();
@@ -52,9 +58,9 @@ class _ThankYouDialogWidgetState extends State<ThankYouDialogWidget> {
             ),
           ),
           const SizedBox(height: 8),
-          const Text(
-            'This checklist has been confirmed.',
-            style: TextStyle(
+          Text(
+            widget.confirmationMessage,
+            style: const TextStyle(
               fontSize: 16,
               color: Color(0xFF313131), // Text color
             ),

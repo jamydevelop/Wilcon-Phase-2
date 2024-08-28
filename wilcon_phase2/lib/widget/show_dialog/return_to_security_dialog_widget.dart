@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:wilcon_phase2/widget/buttons_widget/filled_button_widget.dart';
 import 'package:wilcon_phase2/widget/buttons_widget/modal_close_button_widget.dart';
 import 'package:wilcon_phase2/widget/buttons_widget/outlined_button_widget.dart';
+import 'package:wilcon_phase2/widget/show_dialog/thank_you_dialog_widget.dart';
 
 class ReturnToSecurityDialogWidget extends StatefulWidget {
   const ReturnToSecurityDialogWidget({super.key});
@@ -116,6 +117,7 @@ class _ReturnToSecurityDialogWidgetState
             onPress: () {
               // Handle submit logic
               Navigator.of(context).pop();
+              _showDialog(context);
             },
           ),
           const SizedBox(height: 16),
@@ -127,6 +129,20 @@ class _ReturnToSecurityDialogWidgetState
           )
         ],
       ),
+    );
+  }
+
+  void _showDialog(BuildContext context) {
+    showDialog(
+      context: context,
+      builder: (BuildContext context) {
+        return const Dialog(
+          backgroundColor: Colors.transparent,
+          child: ThankYouDialogWidget(
+              confirmationMessage:
+                  "This checklist has been returned to security officer."),
+        );
+      },
     );
   }
 }
