@@ -43,8 +43,9 @@ class _ProjectDetailsCardContainerState
             onPress: () {},
           ),
           const SizedBox(height: 12),
-          const OutlinedButtonWidget(
+          OutlinedButtonWidget(
             titleText: "Generate Weekly Charges",
+            onPressed: () {},
           ),
         ],
       ),
