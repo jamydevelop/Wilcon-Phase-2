@@ -55,9 +55,7 @@ class CustomSidebar extends StatelessWidget {
                     'Checklist tapped',
                     () => Navigator.pushReplacement(
                       context,
-                      MaterialPageRoute(
-                          // ignore: null_check_always_fails
-                          builder: (context) => null!),
+                      MaterialPageRoute(builder: (context) => const Homepage()),
                     ),
                   ),
                   _buildListTile(
@@ -67,9 +65,7 @@ class CustomSidebar extends StatelessWidget {
                     'For Checking tapped',
                     () => Navigator.pushReplacement(
                       context,
-                      MaterialPageRoute(
-                          // ignore: null_check_always_fails
-                          builder: (context) => null!),
+                      MaterialPageRoute(builder: (context) => const Homepage()),
                     ),
                   ),
                   _buildListTile(
