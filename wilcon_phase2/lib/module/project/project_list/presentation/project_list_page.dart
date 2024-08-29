@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:wilcon_phase2/module/project_list/widget/project_list_body_widget.dart';
+import 'package:wilcon_phase2/module/project/project_list/widget/project_list_body_widget.dart';
 import 'package:wilcon_phase2/widget/sidebar_widget.dart';
 
 class ProjectListPage extends StatefulWidget {

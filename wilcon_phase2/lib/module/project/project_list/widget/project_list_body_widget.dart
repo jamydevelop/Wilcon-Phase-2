@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:wilcon_phase2/module/project_list/widget/project_list_appbar_container_widget.dart';
-import 'package:wilcon_phase2/module/project_list/widget/project_list_content_body_container_widget.dart';
+import 'package:wilcon_phase2/module/project/project_list/widget/project_list_appbar_container_widget.dart';
+import 'package:wilcon_phase2/module/project/project_list/widget/project_list_content_body_container_widget.dart';
 
 class ProjectListBodyWidget extends StatefulWidget {
   const ProjectListBodyWidget({super.key});

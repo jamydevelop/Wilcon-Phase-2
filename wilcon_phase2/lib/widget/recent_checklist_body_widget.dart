@@ -33,6 +33,7 @@ class _RecentChecklistBodyWidgetState extends State<RecentChecklistBodyWidget> {
                   'Acknowledge',
                 ],
               ),
+              SizedBox(height: 12),
               HomepageCardWidget(
                 mainTitle: 'Checklist #432',
                 subTitle: 'Security',
@@ -43,6 +44,7 @@ class _RecentChecklistBodyWidgetState extends State<RecentChecklistBodyWidget> {
                   'Not Validated',
                 ],
               ),
+              SizedBox(height: 12),
               HomepageCardWidget(
                 mainTitle: 'Checklist #432',
                 subTitle: 'Security',
@@ -53,6 +55,7 @@ class _RecentChecklistBodyWidgetState extends State<RecentChecklistBodyWidget> {
                   'For checking of inspector',
                 ],
               ),
+              SizedBox(height: 12),
               HomepageCardWidget(
                 mainTitle: 'Checklist #432',
                 subTitle: 'Security',
