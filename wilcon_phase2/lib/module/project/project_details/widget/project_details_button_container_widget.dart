@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:wilcon_phase2/module/project/project_details/widget/project_details_end_project_dialog_widget.dart';
 import 'package:wilcon_phase2/widget/buttons_widget/filled_button_widget.dart';
 import 'package:wilcon_phase2/widget/buttons_widget/outlined_button_widget.dart';
 
@@ -21,7 +22,9 @@ class _ProjectDetailsButtonContainerWidgetState
           const SizedBox(height: 12),
           FilledButtonWidget(
             titleText: "End Project",
-            onPress: () {},
+            onPress: () {
+              _showEndProjectDialog(context);
+            },
           ),
           const SizedBox(height: 12),
           OutlinedButtonWidget(
@@ -30,6 +33,21 @@ class _ProjectDetailsButtonContainerWidgetState
           ),
         ],
       ),
+    );
+  }
+
+  void _showEndProjectDialog(BuildContext context) {
+    showDialog(
+      context: context,
+      builder: (BuildContext context) {
+        return const Dialog(
+          backgroundColor: Colors.transparent,
+          child: ProjectDetailsEndProjectDialogWidget(
+            title: "Are you sure?",
+            confirmationMessage: 'Are you sure you want to end this project?',
+          ),
+        );
+      },
     );
   }
 }
