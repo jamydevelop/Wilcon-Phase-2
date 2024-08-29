@@ -67,6 +67,7 @@ class _ProjectListContentBodyContainerWidgetState
                         builder: (context) => const ProjectDetailsPage()));
               },
             ),
+            const SizedBox(height: 12),
 
             // Additional content can be added here
           ],

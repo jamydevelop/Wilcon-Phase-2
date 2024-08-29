@@ -8,6 +8,7 @@ import 'package:wilcon_phase2/module/checklist/checklist_summary/widget/card_wid
 import 'package:wilcon_phase2/module/checklist/checklist_summary/widget/card_widget/third_card_body_widget.dart';
 import 'package:wilcon_phase2/module/checklist/checklist_summary/widget/checklist_appbar_container_widget.dart';
 import 'package:wilcon_phase2/module/checklist/checklist_summary/widget/text_label_widget.dart';
+import 'package:wilcon_phase2/widget/divider_with_margin_widget.dart';
 import 'package:wilcon_phase2/widget/show_dialog/error_dialog_widget.dart';
 import 'package:wilcon_phase2/widget/show_dialog/success_dialog_widget.dart';
 
@@ -33,7 +34,7 @@ class _ChecklistBodyWidgetState extends State<ChecklistBodyWidget> {
         Expanded(
           child: SingleChildScrollView(
             child: Container(
-              margin: const EdgeInsets.all(12),
+              //margin: const EdgeInsets.all(12),
               width: double.infinity,
               color: Colors.white, //*********** COLOR TEAL ***************
               child: Column(
@@ -44,7 +45,8 @@ class _ChecklistBodyWidgetState extends State<ChecklistBodyWidget> {
                       _showErrorDialog(context);
                     },
                   ),
-                  const Divider(thickness: 1, color: Colors.grey),
+                  //const Divider(thickness: 1, color: Colors.grey),
+                  const DividerWithMarginWidget(),
                   SecondCardBodyWidget(
                     onPress: () {
                       _showSuccessDialog(context);
@@ -54,7 +56,7 @@ class _ChecklistBodyWidgetState extends State<ChecklistBodyWidget> {
                   const HeaderWidget(title: 'Comments'),
                   const SizedBox(height: 12),
                   const ThirdCardBodyWidget(),
-                  const Divider(thickness: 1, color: Colors.grey),
+                  const DividerWithMarginWidget(),
                   const AddCommentTextfieldWidget(),
                   const SizedBox(height: 12),
                   const HeaderWidget(title: 'History'),

@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:wilcon_phase2/module/checklist/checklist_summary/widget/card_widget/header_widget.dart';
 import 'package:wilcon_phase2/module/project/project_details/widget/project_details_appbar_container_widget.dart';
+import 'package:wilcon_phase2/module/project/project_details/widget/project_details_card_container.dart';
 import 'package:wilcon_phase2/module/project/project_details/widget/project_details_content_body_container_widget.dart';
 
 class ProjectDetailsBodyWidget extends StatefulWidget {
@@ -30,6 +32,9 @@ class _ProjectDetailsBodyWidgetState extends State<ProjectDetailsBodyWidget> {
               child: const Column(
                 children: <Widget>[
                   ProjectDetailsContentBodyContainerWidget(),
+                  HeaderWidget(title: 'Checklist Transactions'),
+                  SizedBox(height: 12),
+                  ProjectDetailsCardContainer(),
                 ],
               ),
             ),

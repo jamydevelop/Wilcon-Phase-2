@@ -6,6 +6,7 @@ class ProjectListCardWidget extends StatefulWidget {
   final List<String> rowTitles;
   final List<String> rowContents;
   final VoidCallback? onPressed; // Nullable onPressed parameter
+  final bool hasButton; // New parameter to control button visibility
 
   const ProjectListCardWidget({
     super.key,
@@ -14,6 +15,7 @@ class ProjectListCardWidget extends StatefulWidget {
     required this.rowTitles,
     required this.rowContents,
     this.onPressed, // Nullable onPressed callback
+    this.hasButton = true, // Default value is true
   });
 
   @override
@@ -126,14 +128,14 @@ class ProjectListCardWidgetState extends State<ProjectListCardWidget> {
               ),
             ),
           ),
-          // Body content with alternating colors and borders
+          // Body content with alternating colors
           if (_isExpanded)
             Container(
               decoration: BoxDecoration(
                 border: Border.all(
-                  color: Colors.grey[600]!,
-                  width: 1.0,
-                ),
+                  color: Colors.grey.shade600,
+                  width: 1,
+                ), // Apply border around the card body only
                 borderRadius: const BorderRadius.vertical(
                   bottom: Radius.circular(8),
                 ),
@@ -146,12 +148,14 @@ class ProjectListCardWidgetState extends State<ProjectListCardWidget> {
                       padding: const EdgeInsets.all(12.0),
                       decoration: BoxDecoration(
                         color: index.isEven ? Colors.white : Colors.grey[200]!,
-                        border: Border(
-                          bottom: BorderSide(
-                            color: Colors.grey[600]!,
-                            width: 1.0,
-                          ),
-                        ),
+                        border: index == 0 || index == 1 || index == 2
+                            ? Border(
+                                bottom: BorderSide(
+                                  color: Colors.grey.shade400,
+                                  width: 1,
+                                ),
+                              )
+                            : null, // Add bottom border for the 1st, 2nd, and 3rd items (index 0, 1, and 2)
                       ),
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -173,37 +177,42 @@ class ProjectListCardWidgetState extends State<ProjectListCardWidget> {
                       ),
                     ),
                   ),
-                  // View Details Button
-                  Padding(
-                    padding: const EdgeInsets.symmetric(
-                        horizontal: 12.0,
-                        vertical: 12.0), // 12px margin on all sides
-                    child: SizedBox(
-                      width: double.infinity, // Full width
-                      child: ElevatedButton(
-                        onPressed: widget
-                            .onPressed, // Use the nullable onPressed callback
-                        style: ElevatedButton.styleFrom(
-                          foregroundColor: Colors.green.shade900,
-                          backgroundColor: Colors.white,
-                          side: BorderSide(color: Colors.green.shade900),
-                          shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(8),
+                  // Conditionally show the button
+                  if (widget.hasButton)
+                    Padding(
+                      padding: const EdgeInsets.symmetric(
+                          horizontal: 12.0,
+                          vertical: 12.0), // 12px margin on all sides
+                      child: SizedBox(
+                        width: double.infinity, // Full width
+                        child: ElevatedButton(
+                          onPressed: widget
+                              .onPressed, // Use the nullable onPressed callback
+                          style: ElevatedButton.styleFrom(
+                            foregroundColor: Colors.green.shade900,
+                            backgroundColor: Colors.white,
+                            side: BorderSide(color: Colors.green.shade900),
+                            shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(8),
+                            ),
+                            minimumSize: const Size(double.infinity, 44),
                           ),
-                          minimumSize: const Size(double.infinity, 44),
-                        ),
-                        child: const Row(
-                          mainAxisSize: MainAxisSize.min,
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: [
-                            Text('View Details'),
-                            SizedBox(width: 8), // Spacing between text and icon
-                            Icon(Icons.arrow_forward, size: 16),
-                          ],
+                          child: const Row(
+                            mainAxisSize: MainAxisSize.min,
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              Text('View Details'),
+                              SizedBox(
+                                  width: 8), // Spacing between text and icon
+                              Icon(Icons.arrow_forward, size: 16),
+                            ],
+                          ),
                         ),
                       ),
-                    ),
-                  ),
+                    )
+                  else
+                    const SizedBox
+                        .shrink(), // Placeholder to maintain structure
                 ],
               ),
             ),

@@ -8,6 +8,7 @@ class HeaderWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
+      margin: const EdgeInsets.symmetric(horizontal: 12),
       height: 56, // height of the header
       padding: const EdgeInsets.symmetric(horizontal: 12), // padding
       alignment: Alignment.centerLeft, // aligns the content to the center-left

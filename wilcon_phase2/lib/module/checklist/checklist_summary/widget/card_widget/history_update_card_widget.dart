@@ -12,6 +12,7 @@ class _HistoryUpdateCardWidgetState extends State<HistoryUpdateCardWidget> {
   @override
   Widget build(BuildContext context) {
     return Container(
+      margin: const EdgeInsets.symmetric(horizontal: 12),
       width: double.infinity,
       padding: const EdgeInsets.all(16.0),
       decoration: BoxDecoration(

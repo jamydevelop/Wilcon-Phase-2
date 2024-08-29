@@ -11,19 +11,22 @@ class ThirdCardBodyWidget extends StatefulWidget {
 class _ThirdCardBodyWidgetState extends State<ThirdCardBodyWidget> {
   @override
   Widget build(BuildContext context) {
-    return Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
-      children: [
-        BuildRowWidget(
-          label: 'Comment here. Sample sentence here.',
-          backgroundColor: Colors.grey[200]!,
-          isTopBorderActivate: false,
-        ),
-        const BuildRowWidget(
+    return Container(
+      margin: const EdgeInsets.symmetric(horizontal: 12),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          BuildRowWidget(
             label: 'Comment here. Sample sentence here.',
-            backgroundColor: Colors.white,
-            isTopBorderActivate: false),
-      ],
+            backgroundColor: Colors.grey[200]!,
+            isTopBorderActivate: false,
+          ),
+          const BuildRowWidget(
+              label: 'Comment here. Sample sentence here.',
+              backgroundColor: Colors.white,
+              isTopBorderActivate: false),
+        ],
+      ),
     );
   }
 }
