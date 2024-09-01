@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:wilcon_phase2/module/draftlist/presentation/draft_list_page.dart';
+import 'package:go_router/go_router.dart';
 
 class DraftListButtonWidget extends StatefulWidget {
   const DraftListButtonWidget({super.key});
@@ -23,11 +23,7 @@ class _DraftListButtonWidgetState extends State<DraftListButtonWidget> {
           ),
         ),
         onPressed: () {
-          Navigator.of(context).push(
-            MaterialPageRoute(
-              builder: (context) => const DraftlistPage(),
-            ),
-          );
+          context.go("/draft_list_page");
         },
         child: const Text(
           'Draft List',

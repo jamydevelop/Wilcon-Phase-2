@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:wilcon_phase2/widget/recent_checklist_body_widget.dart';
+import 'package:wilcon_phase2/module/homepage/widget/homepage_card_container_widget.dart';
 
 class HomePageBodyWidget extends StatefulWidget {
   const HomePageBodyWidget({super.key});
@@ -17,7 +17,7 @@ class _HomePageBodyWidgetState extends State<HomePageBodyWidget> {
         child: const Column(
           children: [
             //SizedBox(height: 24),
-            RecentChecklistBodyWidget(),
+            HomepageCardContainerWidget(),
           ],
         ),
       ),

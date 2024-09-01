@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:wilcon_phase2/module/homepage/presentation/home_page.dart';
+import 'package:go_router/go_router.dart';
 
 class LoginButtonWidget extends StatefulWidget {
   const LoginButtonWidget({super.key});
@@ -28,11 +28,8 @@ class _LoginButtonWidgetState extends State<LoginButtonWidget> {
           foregroundColor: Colors.white, // Set text color to white
         ),
         onPressed: () {
-          Navigator.pushReplacement(
-            context,
-            MaterialPageRoute(builder: (context) => const Homepage()),
-            // MaterialPageRoute(builder: (context) => const ProjectListPage()),
-          );
+          // GoRouter.of(context).go("/home_page");
+          context.go("/home_page");
         },
         child: const Text('Login'),
       ),

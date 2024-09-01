@@ -2,15 +2,16 @@ import 'package:flutter/material.dart';
 import 'package:wilcon_phase2/module/homepage/widget/text_widget/recent_checklist_text_widget.dart';
 import 'package:wilcon_phase2/module/homepage/widget/homepage_card_widget.dart';
 
-class RecentChecklistBodyWidget extends StatefulWidget {
-  const RecentChecklistBodyWidget({super.key});
+class HomepageCardContainerWidget extends StatefulWidget {
+  const HomepageCardContainerWidget({super.key});
 
   @override
-  State<RecentChecklistBodyWidget> createState() =>
-      _RecentChecklistBodyWidgetState();
+  State<HomepageCardContainerWidget> createState() =>
+      _HomepageCardContainerWidgetState();
 }
 
-class _RecentChecklistBodyWidgetState extends State<RecentChecklistBodyWidget> {
+class _HomepageCardContainerWidgetState
+    extends State<HomepageCardContainerWidget> {
   @override
   Widget build(BuildContext context) {
     return Expanded(

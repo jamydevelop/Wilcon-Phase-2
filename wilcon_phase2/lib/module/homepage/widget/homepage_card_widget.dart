@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:wilcon_phase2/module/checklist/checklist_summary/presentation/checklist_summary_page.dart';
+import 'package:go_router/go_router.dart';
 
 class HomepageCardWidget extends StatefulWidget {
   final String mainTitle;
@@ -16,11 +16,10 @@ class HomepageCardWidget extends StatefulWidget {
   });
 
   @override
-  // ignore: library_private_types_in_public_api
-  _HomepageCardWidgetState createState() => _HomepageCardWidgetState();
+  HomepageCardWidgetState createState() => HomepageCardWidgetState();
 }
 
-class _HomepageCardWidgetState extends State<HomepageCardWidget> {
+class HomepageCardWidgetState extends State<HomepageCardWidget> {
   bool _isExpanded = true;
 
   void _toggleExpansion() {
@@ -177,12 +176,7 @@ class _HomepageCardWidgetState extends State<HomepageCardWidget> {
                     width: double.infinity, // Full width
                     child: ElevatedButton(
                       onPressed: () {
-                        Navigator.pushReplacement(
-                          context,
-                          MaterialPageRoute(
-                            builder: (context) => const ChecklistSummaryPage(),
-                          ),
-                        );
+                        context.go("/checklist_summary_page");
                       },
                       style: ElevatedButton.styleFrom(
                         foregroundColor: Colors.green.shade900,

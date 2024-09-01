@@ -2,7 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:wilcon_phase2/module/homepage/presentation/home_page.dart';
 
 class BackToPrevScreen extends StatelessWidget {
-  const BackToPrevScreen({super.key});
+  final VoidCallback? onPress;
+
+  const BackToPrevScreen({super.key, this.onPress});
 
   @override
   Widget build(BuildContext context) {
@@ -12,10 +14,11 @@ class BackToPrevScreen extends StatelessWidget {
       padding: const EdgeInsets.only(
           top: 14.0, left: 12.0, right: 12.0), // Removed bottom padding
       child: InkWell(
-        onTap: () {
-          Navigator.pushReplacement(context,
-              MaterialPageRoute(builder: (context) => const Homepage()));
-        },
+        onTap: onPress ??
+            () {
+              Navigator.pushReplacement(context,
+                  MaterialPageRoute(builder: (context) => const Homepage()));
+            },
         child: const Row(
           mainAxisSize: MainAxisSize.min,
           children: [
