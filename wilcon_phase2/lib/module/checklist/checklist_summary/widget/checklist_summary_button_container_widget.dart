@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 import 'package:wilcon_phase2/module/checklist/checklist_parts/presentation/checklist_parts_parge.dart';
 import 'package:wilcon_phase2/module/checklist/checklist_signature/presentation/checklist_signature_page.dart';
 import 'package:wilcon_phase2/widget/buttons_widget/filled_button_widget.dart';
@@ -26,11 +27,12 @@ class _ChecklistSummaryButtonContainerWidgetState
           FilledButtonWidget(
             titleText: 'View Checklist',
             onPress: () {
-              Navigator.pushReplacement(
-                context,
-                MaterialPageRoute(
-                    builder: (context) => const ChecklistPartsParge()),
-              );
+              GoRouter.of(context).go("/checklist_parts");
+              // Navigator.pushReplacement(
+              //   context,
+              //   MaterialPageRoute(
+              //       builder: (context) => const ChecklistPartsParge()),
+              // );
             },
           ),
           const SizedBox(height: 12),

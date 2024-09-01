@@ -28,8 +28,8 @@ class _LoginButtonWidgetState extends State<LoginButtonWidget> {
           foregroundColor: Colors.white, // Set text color to white
         ),
         onPressed: () {
-          // GoRouter.of(context).go("/home_page");
-          context.go("/home_page");
+          GoRouter.of(context).go("/home");
+          //context.go("/home");
         },
         child: const Text('Login'),
       ),

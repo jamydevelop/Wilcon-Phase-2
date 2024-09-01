@@ -26,7 +26,8 @@ class _ChecklistAppbarContainerWidgetState
             const CustomizedAppBar(),
             BackToPrevScreen(
               onPress: () {
-                context.go("/home_page");
+                // context.go("/home");
+                GoRouter.of(context).go("/home");
               },
             ),
             const SizedBox(height: 12),

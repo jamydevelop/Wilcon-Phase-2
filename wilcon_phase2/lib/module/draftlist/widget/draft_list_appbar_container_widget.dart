@@ -26,7 +26,8 @@ class _DraftListAppbarContainerWidgetState
             const CustomizedAppBar(),
             BackToPrevScreen(
               onPress: () {
-                context.go("/home_page");
+                GoRouter.of(context).go("/home");
+                //context.go("/home");
               },
             ),
             const SizedBox(height: 12),
