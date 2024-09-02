@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
-import 'package:wilcon_phase2/module/auth/presentation/login_page.dart';
+import 'package:wilcon_phase2/module/auth/presentation/auth_page.dart';
 import 'package:wilcon_phase2/module/checklist/checklist_details/presentation/checklist_details_page.dart';
 import 'package:wilcon_phase2/module/checklist/checklist_not_compiled/presentation/checklist_not_compiled_page.dart';
 import 'package:wilcon_phase2/module/checklist/checklist_parts/presentation/checklist_parts_parge.dart';
@@ -28,8 +28,7 @@ class MyApp extends StatelessWidget {
   }
 
   final GoRouter _router = GoRouter(initialLocation: "/login_page", routes: [
-    GoRoute(
-        path: "/login_page", builder: (context, state) => const LoginPage()),
+    GoRoute(path: "/login_page", builder: (context, state) => const AuthPage()),
     GoRoute(path: "/home", builder: (context, state) => const Homepage()),
     GoRoute(path: "/home_page", builder: (context, state) => const Homepage()),
     GoRoute(

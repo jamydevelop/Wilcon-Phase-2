@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
-class LoginButtonWidget extends StatefulWidget {
-  const LoginButtonWidget({super.key});
+class AuthLoginButtonWidget extends StatefulWidget {
+  const AuthLoginButtonWidget({super.key});
 
   @override
-  State<LoginButtonWidget> createState() => _LoginButtonWidgetState();
+  State<AuthLoginButtonWidget> createState() => _AuthLoginButtonWidgetState();
 }
 
-class _LoginButtonWidgetState extends State<LoginButtonWidget> {
+class _AuthLoginButtonWidgetState extends State<AuthLoginButtonWidget> {
   @override
   Widget build(BuildContext context) {
     return SizedBox(

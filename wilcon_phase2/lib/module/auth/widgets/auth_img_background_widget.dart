@@ -1,14 +1,15 @@
 import 'package:flutter/material.dart';
-import 'package:wilcon_phase2/module/auth/widgets/img_tagline_widget.dart';
+import 'package:wilcon_phase2/module/auth/widgets/auth_img_tagline_widget.dart';
 
-class ImgBackgroundWidget extends StatefulWidget {
-  const ImgBackgroundWidget({super.key});
+class AuthImgBackgroundWidget extends StatefulWidget {
+  const AuthImgBackgroundWidget({super.key});
 
   @override
-  State<ImgBackgroundWidget> createState() => _ImgBackgroundWidgetState();
+  State<AuthImgBackgroundWidget> createState() =>
+      _AuthImgBackgroundWidgetState();
 }
 
-class _ImgBackgroundWidgetState extends State<ImgBackgroundWidget> {
+class _AuthImgBackgroundWidgetState extends State<AuthImgBackgroundWidget> {
   @override
   Widget build(BuildContext context) {
     return Stack(
@@ -44,7 +45,7 @@ class _ImgBackgroundWidgetState extends State<ImgBackgroundWidget> {
           right: 0,
           child: Align(
             alignment: Alignment.bottomCenter,
-            child: ImgTaglineWidget(),
+            child: AuthImgTaglineWidget(),
           ),
         ),
       ],

@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 
-class SignedInTextWidget extends StatefulWidget {
-  const SignedInTextWidget({super.key});
+class AuthSignedInTextWidget extends StatefulWidget {
+  const AuthSignedInTextWidget({super.key});
 
   @override
-  State<SignedInTextWidget> createState() => _SignedInTextWidgetState();
+  State<AuthSignedInTextWidget> createState() => _AuthSignedInTextWidgetState();
 }
 
-class _SignedInTextWidgetState extends State<SignedInTextWidget> {
+class _AuthSignedInTextWidgetState extends State<AuthSignedInTextWidget> {
   @override
   Widget build(BuildContext context) {
     return const Text(

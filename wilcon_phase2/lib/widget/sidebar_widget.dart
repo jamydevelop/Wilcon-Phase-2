@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
-import 'package:wilcon_phase2/module/auth/presentation/login_page.dart';
+import 'package:wilcon_phase2/module/auth/presentation/auth_page.dart';
 import 'package:wilcon_phase2/module/homepage/presentation/home_page.dart';
 
 class CustomSidebar extends StatelessWidget {
@@ -104,7 +104,7 @@ class CustomSidebar extends StatelessWidget {
                       Navigator.pushReplacement(
                           context,
                           MaterialPageRoute(
-                              builder: (context) => const LoginPage()));
+                              builder: (context) => const AuthPage()));
                     },
                     child: const Text('Logout'),
                   ),

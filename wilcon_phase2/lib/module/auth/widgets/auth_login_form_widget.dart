@@ -1,16 +1,16 @@
 import 'package:flutter/material.dart';
-import 'package:wilcon_phase2/module/auth/widgets/img_inventi_widget.dart';
-import 'package:wilcon_phase2/module/auth/widgets/login_button_widget.dart';
-import 'package:wilcon_phase2/module/auth/widgets/signed_in_text_widget.dart';
+import 'package:wilcon_phase2/module/auth/widgets/auth_img_inventi_widget.dart';
+import 'package:wilcon_phase2/module/auth/widgets/auth_login_button_widget.dart';
+import 'package:wilcon_phase2/module/auth/widgets/auth_signed_in_text_widget.dart';
 
-class LoginFormWidget extends StatefulWidget {
-  const LoginFormWidget({super.key});
+class AuthLoginFormWidget extends StatefulWidget {
+  const AuthLoginFormWidget({super.key});
 
   @override
-  State<LoginFormWidget> createState() => _LoginFormWidgetState();
+  State<AuthLoginFormWidget> createState() => _AuthLoginFormWidgetState();
 }
 
-class _LoginFormWidgetState extends State<LoginFormWidget> {
+class _AuthLoginFormWidgetState extends State<AuthLoginFormWidget> {
   @override
   Widget build(BuildContext context) {
     return Center(
@@ -31,7 +31,7 @@ class _LoginFormWidgetState extends State<LoginFormWidget> {
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: <Widget>[
                   SizedBox(height: 24),
-                  SignedInTextWidget(),
+                  AuthSignedInTextWidget(),
                   SizedBox(height: 24),
                   TextField(
                     decoration: InputDecoration(
@@ -47,10 +47,10 @@ class _LoginFormWidgetState extends State<LoginFormWidget> {
                     ),
                   ),
                   SizedBox(height: 24),
-                  LoginButtonWidget(),
+                  AuthLoginButtonWidget(),
                   SizedBox(height: 24),
                   SizedBox(width: 99, height: 16),
-                  ImgInventiWidget(),
+                  AuthImgInventiWidget(),
                 ],
               ),
             ),

@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
-import 'package:wilcon_phase2/module/auth/widgets/build_ui_widget.dart';
+import 'package:wilcon_phase2/module/auth/widgets/auth_build_ui_widget.dart';
 
-class LoginPage extends StatefulWidget {
-  const LoginPage({super.key});
+class AuthPage extends StatefulWidget {
+  const AuthPage({super.key});
 
   @override
-  State<LoginPage> createState() => _LoginPageState();
+  State<AuthPage> createState() => _AuthPageState();
 }
 
-class _LoginPageState extends State<LoginPage> {
+class _AuthPageState extends State<AuthPage> {
   @override
   Widget build(BuildContext context) {
     return const SafeArea(
@@ -16,7 +16,7 @@ class _LoginPageState extends State<LoginPage> {
         backgroundColor: Colors.white,
         body: SizedBox(
           child: SafeArea(
-            child: BuildUiWidget(),
+            child: AuthBuildUiWidget(),
           ),
         ),
       ),
