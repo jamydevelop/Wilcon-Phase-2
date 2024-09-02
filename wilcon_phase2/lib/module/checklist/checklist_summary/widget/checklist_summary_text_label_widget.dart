@@ -1,13 +1,15 @@
 import 'package:flutter/material.dart';
 
-class TextLabelWidget extends StatefulWidget {
-  const TextLabelWidget({super.key});
+class ChecklistSummaryTextLabelWidget extends StatefulWidget {
+  const ChecklistSummaryTextLabelWidget({super.key});
 
   @override
-  State<TextLabelWidget> createState() => _TextLabelWidgetState();
+  State<ChecklistSummaryTextLabelWidget> createState() =>
+      _ChecklistSummaryTextLabelWidgetState();
 }
 
-class _TextLabelWidgetState extends State<TextLabelWidget> {
+class _ChecklistSummaryTextLabelWidgetState
+    extends State<ChecklistSummaryTextLabelWidget> {
   @override
   Widget build(BuildContext context) {
     return Container(

@@ -1,14 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
-class DraftListButtonWidget extends StatefulWidget {
-  const DraftListButtonWidget({super.key});
+class HomepageDraftListButtonWidget extends StatefulWidget {
+  const HomepageDraftListButtonWidget({super.key});
 
   @override
-  State<DraftListButtonWidget> createState() => _DraftListButtonWidgetState();
+  State<HomepageDraftListButtonWidget> createState() =>
+      _HomepageDraftListButtonWidgetState();
 }
 
-class _DraftListButtonWidgetState extends State<DraftListButtonWidget> {
+class _HomepageDraftListButtonWidgetState
+    extends State<HomepageDraftListButtonWidget> {
   @override
   Widget build(BuildContext context) {
     return SizedBox(

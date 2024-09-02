@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:wilcon_phase2/module/checklist/checklist_summary/widget/checklist_body_widget.dart';
+import 'package:wilcon_phase2/module/checklist/checklist_summary/widget/checklist_summary_body_widget.dart';
 import 'package:wilcon_phase2/widget/sidebar_widget.dart';
 
 class ChecklistSummaryPage extends StatefulWidget {
@@ -17,7 +17,7 @@ class _ChecklistSummaryPageState extends State<ChecklistSummaryPage> {
       endDrawer:
           CustomSidebar(), // Make sure this is not const if it is not a const constructor
       body: SafeArea(
-        child: ChecklistBodyWidget(),
+        child: ChecklistSummaryBodyWidget(),
       ),
     );
   }

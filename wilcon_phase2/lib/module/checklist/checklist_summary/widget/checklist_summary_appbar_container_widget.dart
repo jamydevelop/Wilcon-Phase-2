@@ -4,16 +4,16 @@ import 'package:wilcon_phase2/widget/customized_appbar/appbar_widget.dart';
 import 'package:wilcon_phase2/widget/customized_appbar/back_screen_widget.dart';
 import 'package:wilcon_phase2/widget/header_bar_widget.dart';
 
-class ChecklistAppbarContainerWidget extends StatefulWidget {
-  const ChecklistAppbarContainerWidget({super.key});
+class ChecklistSummaryAppbarContainerWidget extends StatefulWidget {
+  const ChecklistSummaryAppbarContainerWidget({super.key});
 
   @override
-  State<ChecklistAppbarContainerWidget> createState() =>
-      _ChecklistAppbarContainerWidgetState();
+  State<ChecklistSummaryAppbarContainerWidget> createState() =>
+      _ChecklistSummaryAppbarContainerWidgetState();
 }
 
-class _ChecklistAppbarContainerWidgetState
-    extends State<ChecklistAppbarContainerWidget> {
+class _ChecklistSummaryAppbarContainerWidgetState
+    extends State<ChecklistSummaryAppbarContainerWidget> {
   @override
   Widget build(BuildContext context) {
     return Container(

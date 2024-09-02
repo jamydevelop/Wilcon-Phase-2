@@ -6,20 +6,22 @@ import 'package:wilcon_phase2/module/checklist/checklist_summary/widget/card_wid
 import 'package:wilcon_phase2/module/checklist/checklist_summary/widget/card_widget/history_update_card_widget.dart';
 import 'package:wilcon_phase2/module/checklist/checklist_summary/widget/card_widget/second_card_body_widget.dart';
 import 'package:wilcon_phase2/module/checklist/checklist_summary/widget/card_widget/third_card_body_widget.dart';
-import 'package:wilcon_phase2/module/checklist/checklist_summary/widget/checklist_appbar_container_widget.dart';
-import 'package:wilcon_phase2/module/checklist/checklist_summary/widget/text_label_widget.dart';
+import 'package:wilcon_phase2/module/checklist/checklist_summary/widget/checklist_summary_appbar_container_widget.dart';
+import 'package:wilcon_phase2/module/checklist/checklist_summary/widget/checklist_summary_text_label_widget.dart';
 import 'package:wilcon_phase2/widget/divider_with_margin_widget.dart';
 import 'package:wilcon_phase2/widget/show_dialog/error_dialog_widget.dart';
 import 'package:wilcon_phase2/widget/show_dialog/success_dialog_widget.dart';
 
-class ChecklistBodyWidget extends StatefulWidget {
-  const ChecklistBodyWidget({super.key});
+class ChecklistSummaryBodyWidget extends StatefulWidget {
+  const ChecklistSummaryBodyWidget({super.key});
 
   @override
-  State<ChecklistBodyWidget> createState() => _ChecklistBodyWidgetState();
+  State<ChecklistSummaryBodyWidget> createState() =>
+      _ChecklistSummaryBodyWidgetState();
 }
 
-class _ChecklistBodyWidgetState extends State<ChecklistBodyWidget> {
+class _ChecklistSummaryBodyWidgetState
+    extends State<ChecklistSummaryBodyWidget> {
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -28,7 +30,7 @@ class _ChecklistBodyWidgetState extends State<ChecklistBodyWidget> {
         const Material(
           elevation: 4.0, // Adjust elevation for the floating effect
           shadowColor: Colors.black45, // Optional: To control shadow color
-          child: ChecklistAppbarContainerWidget(),
+          child: ChecklistSummaryAppbarContainerWidget(),
         ),
         const SizedBox(height: 12),
         Expanded(
@@ -39,7 +41,7 @@ class _ChecklistBodyWidgetState extends State<ChecklistBodyWidget> {
               color: Colors.white, //*********** COLOR TEAL ***************
               child: Column(
                 children: <Widget>[
-                  const TextLabelWidget(),
+                  const ChecklistSummaryTextLabelWidget(),
                   FirstCardBodyWidget(
                     onPress: () {
                       _showErrorDialog(context);

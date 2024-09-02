@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:wilcon_phase2/module/homepage/widget/homepage_card_container_widget.dart';
 
-class HomePageBodyWidget extends StatefulWidget {
-  const HomePageBodyWidget({super.key});
+class HomepageBodyWidget extends StatefulWidget {
+  const HomepageBodyWidget({super.key});
 
   @override
-  State<HomePageBodyWidget> createState() => _HomePageBodyWidgetState();
+  State<HomepageBodyWidget> createState() => _HomepageBodyWidgetState();
 }
 
-class _HomePageBodyWidgetState extends State<HomePageBodyWidget> {
+class _HomepageBodyWidgetState extends State<HomepageBodyWidget> {
   @override
   Widget build(BuildContext context) {
     return Expanded(

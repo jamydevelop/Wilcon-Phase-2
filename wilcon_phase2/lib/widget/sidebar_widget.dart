@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:wilcon_phase2/module/auth/presentation/auth_page.dart';
-import 'package:wilcon_phase2/module/homepage/presentation/home_page.dart';
+import 'package:wilcon_phase2/module/homepage/presentation/homepage.dart';
 
 class CustomSidebar extends StatelessWidget {
   const CustomSidebar({super.key});

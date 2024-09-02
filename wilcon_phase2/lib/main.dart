@@ -7,7 +7,7 @@ import 'package:wilcon_phase2/module/checklist/checklist_parts/presentation/chec
 import 'package:wilcon_phase2/module/checklist/checklist_signature/presentation/checklist_signature_page.dart';
 import 'package:wilcon_phase2/module/checklist/checklist_summary/presentation/checklist_summary_page.dart';
 import 'package:wilcon_phase2/module/draftlist/presentation/draft_list_page.dart';
-import 'package:wilcon_phase2/module/homepage/presentation/home_page.dart';
+import 'package:wilcon_phase2/module/homepage/presentation/homepage.dart';
 import 'package:wilcon_phase2/module/project/project_details/presentation/project_details_page.dart';
 
 void main() {
