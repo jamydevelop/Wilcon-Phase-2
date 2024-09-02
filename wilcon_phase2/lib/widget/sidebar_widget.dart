@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 import 'package:wilcon_phase2/module/auth/presentation/login_page.dart';
 import 'package:wilcon_phase2/module/homepage/presentation/home_page.dart';
-import 'package:wilcon_phase2/module/project/project_list/presentation/project_list_page.dart';
 
 class CustomSidebar extends StatelessWidget {
   const CustomSidebar({super.key});
@@ -43,10 +43,7 @@ class CustomSidebar extends StatelessWidget {
                     Icons.home,
                     'Homepage',
                     'Homepage tapped',
-                    () => Navigator.pushReplacement(
-                      context,
-                      MaterialPageRoute(builder: (context) => const Homepage()),
-                    ),
+                    () => GoRouter.of(context).go("/home_page"),
                   ),
                   _buildListTile(
                     context,
@@ -73,11 +70,7 @@ class CustomSidebar extends StatelessWidget {
                     Icons.cases_sharp,
                     'Projects',
                     'Projects tapped',
-                    () => Navigator.pushReplacement(
-                      context,
-                      MaterialPageRoute(
-                          builder: (context) => const ProjectListPage()),
-                    ),
+                    () => GoRouter.of(context).go("/project_details"),
                   ),
                   const Padding(
                     padding: EdgeInsets.symmetric(horizontal: 12.0),

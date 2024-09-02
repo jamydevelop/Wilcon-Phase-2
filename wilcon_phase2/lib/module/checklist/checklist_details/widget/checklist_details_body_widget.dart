@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 import 'package:wilcon_phase2/module/checklist/checklist_details/widget/checklist_details_appbar_container_widget.dart';
 import 'package:wilcon_phase2/module/checklist/checklist_details/widget/checklist_details_card_widget.dart';
 import 'package:wilcon_phase2/module/checklist/checklist_details/widget/checklist_details_image_text_container_widget.dart';
-import 'package:wilcon_phase2/module/checklist/checklist_not_compiled/presentation/checklist_not_compiled_page.dart';
 import 'package:wilcon_phase2/module/checklist/checklist_summary/widget/card_widget/header_widget.dart';
 
 class ChecklistDetailsBodyWidget extends StatefulWidget {
@@ -42,11 +42,12 @@ class _ChecklistDetailsBodyWidgetState
                         "Complete installed perimeter fence and perimeter lights.",
                     isCompiled: false,
                     onTap: () {
-                      Navigator.pushReplacement(
-                          context,
-                          MaterialPageRoute(
-                              builder: (context) =>
-                                  const ChecklistNotCompiledPage()));
+                      GoRouter.of(context).go("/not_compiled");
+                      // Navigator.pushReplacement(
+                      //     context,
+                      //     MaterialPageRoute(
+                      //         builder: (context) =>
+                      //             const ChecklistNotCompiledPage()));
                     },
                   ),
                   ChecklistDetailsCardWidget(
@@ -54,11 +55,7 @@ class _ChecklistDetailsBodyWidgetState
                         "No bunk house/barracks on-site (Except for the warehouse of contractor’s tools and equipment)",
                     isCompiled: true,
                     onTap: () {
-                      Navigator.pushReplacement(
-                          context,
-                          MaterialPageRoute(
-                              builder: (context) =>
-                                  const ChecklistNotCompiledPage()));
+                      GoRouter.of(context).go("/not_compiled");
                     },
                   ),
                   ChecklistDetailsCardWidget(
@@ -66,11 +63,7 @@ class _ChecklistDetailsBodyWidgetState
                         "With a separate entrance and exits for workers and delivery trucks",
                     isCompiled: false,
                     onTap: () {
-                      Navigator.pushReplacement(
-                          context,
-                          MaterialPageRoute(
-                              builder: (context) =>
-                                  const ChecklistNotCompiledPage()));
+                      GoRouter.of(context).go("/not_compiled");
                     },
                   ),
                   ChecklistDetailsCardWidget(
@@ -78,11 +71,7 @@ class _ChecklistDetailsBodyWidgetState
                         "With a temporary warehouse for Wilcon Engineering materials",
                     isCompiled: true,
                     onTap: () {
-                      Navigator.pushReplacement(
-                          context,
-                          MaterialPageRoute(
-                              builder: (context) =>
-                                  const ChecklistNotCompiledPage()));
+                      GoRouter.of(context).go("/not_compiled");
                     },
                   ),
                   ChecklistDetailsCardWidget(
@@ -90,11 +79,7 @@ class _ChecklistDetailsBodyWidgetState
                         "Certified safety officer on duty (COSH) - provide a copy of the Certificate to Wilcon Project Engineer and Corporate Security Setter",
                     isCompiled: true,
                     onTap: () {
-                      Navigator.pushReplacement(
-                          context,
-                          MaterialPageRoute(
-                              builder: (context) =>
-                                  const ChecklistNotCompiledPage()));
+                      GoRouter.of(context).go("/not_compiled");
                     },
                   ),
                   ChecklistDetailsCardWidget(
@@ -102,11 +87,7 @@ class _ChecklistDetailsBodyWidgetState
                         "Safety and security signages are in place in noticeable areas",
                     isCompiled: true,
                     onTap: () {
-                      Navigator.pushReplacement(
-                          context,
-                          MaterialPageRoute(
-                              builder: (context) =>
-                                  const ChecklistNotCompiledPage()));
+                      GoRouter.of(context).go("/not_compiled");
                     },
                   ),
                   const Divider(height: 1),
