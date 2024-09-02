@@ -54,6 +54,7 @@ class _ChecklistDetailsCardWidgetState
       onTap: widget.onTap, // Use the onTap parameter
       child: Container(
         decoration: BoxDecoration(
+          color: Colors.white,
           border: Border.all(
             color: Colors.grey, // Dark grey color
             width: 1.0, // 1px width
@@ -62,6 +63,7 @@ class _ChecklistDetailsCardWidgetState
         ),
         margin: const EdgeInsets.only(bottom: 12),
         child: Card(
+          color: Colors.white,
           elevation: 2.0,
           margin: EdgeInsets
               .zero, // Remove margin from Card to align with Container
