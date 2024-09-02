@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:wilcon_phase2/module/auth/presentation/login_page.dart';
 import 'package:wilcon_phase2/module/checklist/checklist_parts/presentation/checklist_parts_parge.dart';
+import 'package:wilcon_phase2/module/checklist/checklist_signature/presentation/checklist_signature_page.dart';
 import 'package:wilcon_phase2/module/checklist/checklist_summary/presentation/checklist_summary_page.dart';
 import 'package:wilcon_phase2/module/draftlist/presentation/draft_list_page.dart';
 import 'package:wilcon_phase2/module/homepage/presentation/home_page.dart';
@@ -38,5 +39,9 @@ class MyApp extends StatelessWidget {
     GoRoute(
         path: "/checklist_parts",
         builder: (context, state) => const ChecklistPartsParge()),
+
+    GoRoute(
+        path: "/signature_page",
+        builder: (context, state) => const ChecklistSignaturePage()),
   ]);
 }

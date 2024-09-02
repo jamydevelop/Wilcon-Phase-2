@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
-import 'package:wilcon_phase2/module/checklist/checklist_signature/presentation/checklist_signature_page.dart';
 import 'package:wilcon_phase2/widget/buttons_widget/filled_button_widget.dart';
 import 'package:wilcon_phase2/widget/buttons_widget/only_text_button_widget.dart';
 import 'package:wilcon_phase2/widget/buttons_widget/outlined_button_widget.dart';
@@ -38,10 +37,11 @@ class _ChecklistSummaryButtonContainerWidgetState
           FilledButtonWidget(
             titleText: 'Confirm',
             onPress: () {
-              Navigator.pushReplacement(
-                  context,
-                  MaterialPageRoute(
-                      builder: (context) => const ChecklistSignaturePage()));
+              GoRouter.of(context).go("/signature_page");
+              // Navigator.pushReplacement(
+              //     context,
+              //     MaterialPageRoute(
+              //         builder: (context) => const ChecklistSignaturePage()));
             },
           ),
           const SizedBox(height: 12),

@@ -11,6 +11,7 @@ class _NotificationCardWidgetState extends State<NotificationCardWidget> {
   @override
   Widget build(BuildContext context) {
     return Card(
+      color: Colors.white,
       margin: EdgeInsets.zero, // Remove any external margin
       elevation: 4.0, // Remove card shadow
       shape: const RoundedRectangleBorder(
