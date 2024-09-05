@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:wilcon_phase2/module/auth/widgets/auth_img_inventi_widget.dart';
-import 'package:wilcon_phase2/module/auth/widgets/auth_login_button_widget.dart';
-import 'package:wilcon_phase2/module/auth/widgets/auth_signed_in_text_widget.dart';
+import 'package:wilcon_phase2/module/auth/widgets/auth_img_inventi.widget.dart';
+import 'package:wilcon_phase2/module/auth/widgets/auth_login_button.widget.dart';
+import 'package:wilcon_phase2/module/auth/widgets/auth_signed_in_text.widget.dart';
 
 class AuthLoginFormWidget extends StatefulWidget {
   const AuthLoginFormWidget({super.key});

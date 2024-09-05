@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
+import 'package:wilcon_phase2/routes.dart';
 
 class AuthLoginButtonWidget extends StatefulWidget {
   const AuthLoginButtonWidget({super.key});
@@ -28,7 +29,8 @@ class _AuthLoginButtonWidgetState extends State<AuthLoginButtonWidget> {
           foregroundColor: Colors.white, // Set text color to white
         ),
         onPressed: () {
-          GoRouter.of(context).go("/home");
+          GoRouter.of(context).go(AppRoute.homePage);
+          //GoRouter.of(context).go("/home");
           //context.go("/home");
         },
         child: const Text('Login'),

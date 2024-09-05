@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:wilcon_phase2/module/homepage/widget/text_widget/recent_checklist_text_widget.dart';
-import 'package:wilcon_phase2/module/homepage/widget/homepage_card_widget.dart';
+import 'package:wilcon_phase2/module/homepage/widget/homepage_card.widget.dart';
 
 class HomepageCardContainerWidget extends StatefulWidget {
   const HomepageCardContainerWidget({super.key});

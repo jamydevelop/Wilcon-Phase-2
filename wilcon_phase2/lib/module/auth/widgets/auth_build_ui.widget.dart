@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:wilcon_phase2/module/auth/widgets/auth_img_background_widget.dart';
-import 'package:wilcon_phase2/module/auth/widgets/auth_login_form_widget.dart';
+import 'package:wilcon_phase2/module/auth/widgets/auth_img_background.widget.dart';
+import 'package:wilcon_phase2/module/auth/widgets/auth_login_form.widget.dart';
 
 class AuthBuildUiWidget extends StatefulWidget {
   const AuthBuildUiWidget({super.key});

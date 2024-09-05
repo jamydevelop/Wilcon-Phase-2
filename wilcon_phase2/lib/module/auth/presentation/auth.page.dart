@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:wilcon_phase2/module/auth/widgets/auth_build_ui_widget.dart';
+import 'package:wilcon_phase2/module/auth/widgets/auth_build_ui.widget.dart';
 
 class AuthPage extends StatefulWidget {
   const AuthPage({super.key});

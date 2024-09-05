@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
-import 'package:wilcon_phase2/module/auth/presentation/auth_page.dart';
-import 'package:wilcon_phase2/module/homepage/presentation/homepage.dart';
+import 'package:wilcon_phase2/module/auth/presentation/auth.page.dart';
+import 'package:wilcon_phase2/module/homepage/presentation/home.page.dart';
 
 class CustomSidebar extends StatelessWidget {
   const CustomSidebar({super.key});
@@ -52,7 +52,7 @@ class CustomSidebar extends StatelessWidget {
                     'Checklist tapped',
                     () => Navigator.pushReplacement(
                       context,
-                      MaterialPageRoute(builder: (context) => const Homepage()),
+                      MaterialPageRoute(builder: (context) => const HomePage()),
                     ),
                   ),
                   _buildListTile(
@@ -62,7 +62,7 @@ class CustomSidebar extends StatelessWidget {
                     'For Checking tapped',
                     () => Navigator.pushReplacement(
                       context,
-                      MaterialPageRoute(builder: (context) => const Homepage()),
+                      MaterialPageRoute(builder: (context) => const HomePage()),
                     ),
                   ),
                   _buildListTile(

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:wilcon_phase2/module/homepage/presentation/homepage.dart';
+import 'package:wilcon_phase2/module/homepage/presentation/home.page.dart';
 
 class BackToPrevScreen extends StatelessWidget {
   final VoidCallback? onPress;
@@ -17,7 +17,7 @@ class BackToPrevScreen extends StatelessWidget {
         onTap: onPress ??
             () {
               Navigator.pushReplacement(context,
-                  MaterialPageRoute(builder: (context) => const Homepage()));
+                  MaterialPageRoute(builder: (context) => const HomePage()));
             },
         child: const Row(
           mainAxisSize: MainAxisSize.min,

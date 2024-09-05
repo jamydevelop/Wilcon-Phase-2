@@ -1,16 +1,16 @@
 import 'package:flutter/material.dart';
-import 'package:wilcon_phase2/module/homepage/widget/homepage_appbar_container_widget.dart';
-import 'package:wilcon_phase2/module/homepage/widget/homepage_body_widget.dart';
+import 'package:wilcon_phase2/module/homepage/widget/homepage_appbar_container.widget.dart';
+import 'package:wilcon_phase2/module/homepage/widget/homepage_body.widget.dart';
 import 'package:wilcon_phase2/widget/sidebar_widget.dart';
 
-class Homepage extends StatefulWidget {
-  const Homepage({super.key});
+class HomePage extends StatefulWidget {
+  const HomePage({super.key});
 
   @override
-  State<Homepage> createState() => _HomepageState();
+  State<HomePage> createState() => _HomePageState();
 }
 
-class _HomepageState extends State<Homepage> {
+class _HomePageState extends State<HomePage> {
   // ButtonClass buttonClass = ButtonClass();
   @override
   Widget build(BuildContext context) {

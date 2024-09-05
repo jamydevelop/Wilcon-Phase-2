@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:wilcon_phase2/module/auth/widgets/auth_img_tagline_widget.dart';
+import 'package:wilcon_phase2/module/auth/widgets/auth_img_tagline.widget.dart';
 
 class AuthImgBackgroundWidget extends StatefulWidget {
   const AuthImgBackgroundWidget({super.key});
